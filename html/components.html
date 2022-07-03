@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caps home iot components</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.range.js"></script>
+    <script src="../js/timepicker.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
+    <script src="../js/reinvented-color-wheel.js"></script>
+    <link href="../css/import.css" rel="stylesheet">
+  </head>
+  <body> 
+    <div class="wrapper_component_samples">
+      <div class="wrapper_sapmle">
+        <div class="tit_sample">Color Picker</div>
+        <div class="wrapper_color_picker">
+          <div class="bg_bulb"></div>
+          <div class="picked_color_layer" id="pickedColorLayer"></div>
+          <div id="colorpicker"></div>
+          <pre> <code class="language-javascript hljs"> var pickedColorLayer = document.getElementById("pickedColorLayer"); // 선택된 색상으로 설정 되는 타겟 DOM (전구 뒤에 존재)
+var setBulbColor = function (color) { //rgb css 형식으로 return 해주는 함수
+return "rgb(" + color.rgb[0] + "," + color.rgb[1] + "," + color.rgb[2]  + ")";}
+var defaultColor = { //초기 색상 설정
+ rgb: [255, 0, 0] };
+pickedColorLayer.style.backgroundColor = setBulbColor(defaultColor); // 전구 초기 색상 세팅
+var colorpicker = new ReinventedColorWheel({ // colorpicker 렌더
+ appendTo: document.getElementById('colorpicker'),
+ wheelDiameter: 230, // picker 지름
+ wheelThickness: 30, // 휠 굵기
+ handleDiameter: 26, // 핸들 크기
+ wheelReflectsSaturation: false, //채도반영
+ rgb: defaultColor.rgb, // colorpicker 초기 색상 세팅
+ onChange: function (color) { // 색상 변경시마다 전구색상 세팅
+   pickedColorLayer.style.backgroundColor = setBulbColor(color);
+ },
+})</code></pre>
+        </div>
+      </div>
+      <div class="wrapper_sapmle">
+        <div class="tit_sample">Date Picker </div>
+        <div class="wrapper_date_picker">
+          <input type="text" id="date1">
+          <input type="text" id="time1">
+        </div>
+        <pre><code class="language-javascript hljs">$("#date1").datepicker({
+ dateFormat: 'yy-mm-dd',
+ autoclose: true,
+ todayHighlight: true
+});</code></pre>
+      </div>
+      <div class="wrapper_sapmle">
+        <div class="tit_sample">Range</div>
+        <div class="box_radius">
+          <div class="wrapper_range" id="range1"> 
+            <input type="hidden" value="0">
+          </div>
+        </div>
+        <div class="box_radius">
+          <div class="wrapper_range" id="range2"> 
+            <input type="hidden" value="0">
+          </div>
+        </div>
+        <pre> <code class="language-javascript hljs">$('#range1 input').jRange({
+ from: 0,
+ to: 100,
+ step: 1,
+ scale: [0, 100],
+ format: '%s',
+ width: $("#range1").width(),
+ showLabels: true,
+ snap: true
+});
+
+$('#range2 input').jRange({
+ from: 0,
+ to: 100,
+ step: 1,
+ scale: [0, 25, 50, 75, 100],
+ format: '%s',
+ width: $("#range2").width(),
+ showLabels: true,
+ snap: true
+});</code></pre>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  hljs.highlightAll(); //codes highlight
+  
+  //- S : color picker
+  var pickedColorLayer = document.getElementById("pickedColorLayer"); // 선택된 색상으로 설정 되는 타겟 DOM (전구 뒤에 존재)
+  var defaultColor = { //초기 색상 설정
+    hex: "#0061ff"
+  };
+  pickedColorLayer.style.backgroundColor = defaultColor.hex; // 전구 초기 색상 세팅
+  
+  var colorpicker = new ReinventedColorWheel({ // colorpicker 렌더
+    appendTo: document.getElementById('colorpicker'),
+    wheelDiameter: 230, // picker 지름
+    wheelThickness: 30, // 휠 굵기
+    handleDiameter: 26, // 핸들 크기
+    wheelReflectsSaturation: false, //채도반영
+    hex: defaultColor.hex, // colorpicker 초기 색상 세팅
+    onChange: function (color) { // 색상 변경시마다 전구색상 세팅
+      pickedColorLayer.style.backgroundColor = color.hex;
+    },
+  })
+  //- E : color picker
+  
+  //- S : date picker
+  $("#date1").datepicker({
+    dateFormat: 'yy-mm-dd',
+    autoclose: true,
+    todayHighlight: true
+  });
+  $('#time1').timepicker({
+    //- defaultTime: '11',
+    timeFormat: 'HH:mm',
+    interval: 30,
+    startTime: '00:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+  });
+  //- E : date picker
+  
+  //- S : range
+  $('#range1 input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0, 100],
+    format: '%s',
+    width: $("#range1").width(),
+    showLabels: true,
+    snap: true
+  });
+  
+  $('#range2 input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0, 25, 50, 75, 100],
+    format: '%s',
+    width: $("#range2").width(),
+    showLabels: true,
+    snap: true
+  });
+  //- E : range
+</script>
