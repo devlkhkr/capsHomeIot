@@ -111,7 +111,7 @@
 				return;
 			}
 			e.stopPropagation();
-			e.preventDefault();
+			// e.preventDefault();
 			var pointer = $(e.target);
 			this.pointers.removeClass('last-active');
 			pointer.addClass('focused last-active');
