@@ -5,14 +5,16 @@
   padding-top: px(140);
 }
 
-.box_full, .box_inner {
+.box_full {
   background-color: #fff;
   padding-left: px(50);
   padding-right: px(50);
+  margin-top: px(20);
 }
 
-.box_full {
-  margin-top: px(20);
+.box_inner{
+  padding-left: px(50);
+  padding-right: px(50);
 }
 
 .box_radius {

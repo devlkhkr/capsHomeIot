@@ -7,6 +7,13 @@ input[type="text"] {
     font-size: px(46);
     font-weight: 400;
     color: #030303;
+    &:focus{
+        outline: 0;
+        border-color: #2254f3;
+    }
+    &.input_full{
+        width: 100%;
+    }
 }
 
 .check_type_01{
@@ -181,8 +188,31 @@ button {
 }
 
 .wrapper_bottom_btns{
+    width: 100%;
     text-align: center;
-    button + button {
-        margin-left: px(30);
+    padding-bottom: px(200);
+    &.pos_abs_btm{
+        position: absolute;
+        bottom: 0;
+    }
+    button{
+        height: px(140);
+        & + button {
+            margin-left: px(30);
+        }
+    }
+}
+
+.wrapper_validate{
+    &.error{
+        input[type=text]{
+            border-color: #cc3333;
+            &:focus{
+                outline: none;
+            }
+        }
+        .notice_gray{
+            color: #cc3333;
+        }
     }
 }

@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(href="../css/import.css" rel="stylesheet")
+        script(src="../js/jquery.js")
+        script(src="../js/jquery-ui.js")
+        script(src="../js/jquery.range.js")
+        script(src="../js/timepicker.js")
+        script(src="../js/common.js")
+        title Document
+    body 
+        .wrapper_caps_home 
+            .caps_home_header
+                i.icon_header_back
+                h2.tit_header 기기 편집
+            .box_inner.pt_98
+                .wrapper_validate
+                    .subtit_fs_42.pl_32.pb_38 장소이름
+                    input(type="text" value="거실").input_full
+                    .notice_gray.pt_64.pl_46 15자이내로입력해주세요.특수기호는불가합니다.
+                .subtit_fs_42.pl_32.pt_100 제품정보
+                .txt_model_name Model-ABC-001
+            .wrapper_bottom_btns.pos_abs_btm
+                button(type="button" onclick="openLayer('visitor-key-cancel')").btn_wid_380.btn_lgray 취소
+                button(type="button" onclick="openLayer('visitor-key-confirm')").btn_wid_380.btn_lblue 저장
+script.
+

@@ -35,7 +35,7 @@ html(lang="en")
                 i.icon_header_back
                 h2.tit_header 방문자 키 발급
                 i.icon_header_menu
-            .box_full.pt_124.pb_164
+            .box_full.pt_124.pb_164.mb_300
                 .subtit_fs_45.pb_56 방문자키를발급할휴대폰번호를입력해주세요.
                 .type_input_button
                     input(type="text" value="010-1234-5678")
@@ -56,9 +56,9 @@ html(lang="en")
                     input(type="text" value="123456").input_random
                     button(type="button").btn_hei_120.btn_dblue 랜덤생성
                 .notice_gray.before_dot.pt_50 일회용비밀번호로사용할6자리숫자를입력해주세요.
-            .wrapper_bottom_btns.mt_300.pb_200
-                button(type="button" onclick="openLayer('visitor-key-cancel')").btn_hei_120.btn_wid_380.btn_lgray 취소
-                button(type="button" onclick="openLayer('visitor-key-confirm')").btn_hei_120.btn_wid_380.btn_lblue 저장
+            .wrapper_bottom_btns
+                button(type="button" onclick="openLayer('visitor-key-cancel')").btn_wid_380.btn_lgray 취소
+                button(type="button" onclick="openLayer('visitor-key-confirm')").btn_wid_380.btn_lblue 저장
 script.
     //- S : date picker
     $("#startDate, #endDate").datepicker({
