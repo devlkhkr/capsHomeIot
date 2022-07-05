@@ -651,6 +651,7 @@ ul.wrapper_used_history li .history_state.opened {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 9998;
 }
 
 .caps_home_header .tit_header {
