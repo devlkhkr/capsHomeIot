@@ -18,3 +18,14 @@ var rangeChange = function(input){
   targetInput[0].innerHTML = input.value
   targetInput[0].style.left = input.value + "%";
 }
+
+var openLayer = function(dataLayer) {
+  $("[data-layer]").removeClass("on");
+  $(".wrapper_layer_popup").addClass("on")
+  $("[data-layer=" + dataLayer + "]").eq(0).addClass("on");
+}
+
+var closeLayer = function() {
+  $(".wrapper_layer_popup").removeClass("on");
+  $("[data-layer]").removeClass("on");
+}

@@ -1,0 +1,109 @@
+input[type="text"] {
+    appearance: none;
+    padding: 0 px(42);
+    border: px(3) solid #dadada;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-size: px(46);
+    font-weight: 400;
+    color: #030303;
+}
+
+input,
+button {
+    border-radius: px(16);
+}
+
+input[type="text"],
+.btn_hei_120 {
+    height: px(120);
+}
+
+.btn_wid_380 {
+    width: px(380);
+}
+
+button {
+    border: px(3) solid transparent;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: px(45);
+}
+
+.btn_dblue {
+    background-color: #2448a8;
+    border-color: #2448a8;
+    color: #fff;
+}
+
+.btn_lblue {
+    background-color: #2254f3;
+    border-color: #2254f3;
+    color: #fff;
+}
+
+.btn_lgray {
+    background-color: #999999;
+    border-color: #999999;
+    color: #fff;
+}
+
+.input_date {
+    background-image: url(../../images/icon_cal.png);
+    background-repeat: no-repeat;
+    background-size: px(46);
+    background-position: center right px(32);
+}
+
+.input_time {
+
+}
+
+.input_random {
+    background-image: url(../../images/icon_random.png);
+    background-repeat: no-repeat;
+    background-size: px(56);
+    background-position: center right px(32);
+}
+
+.type_input_button {
+    display: flex;
+    input,
+    button {
+        flex: auto;
+    }
+    input {
+        width: px(616);
+        margin-right: px(34);
+    }
+}
+
+.type_input_date{
+    .subtit_fs_46{
+        display: inline-block;
+        line-height: px(120);
+        vertical-align: middle;
+        padding: 0 px(72) 0 px(40);
+    }
+    .input_date{
+        width: px(490);
+        padding: 0 px(70);
+        & + .input_time {
+            margin-left: px(40);
+        }
+    }
+    .input_time{
+        width: px(200);
+        text-align: center;
+    }
+    & + .type_input_date{
+        margin-top: px(22);
+    }
+}
+
+.wrapper_bottom_btns{
+    text-align: center;
+    button + button {
+        margin-left: px(30);
+    }
+}

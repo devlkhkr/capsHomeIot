@@ -1,7 +1,29 @@
+.wrapper_caps_home{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #edeef0;
+  padding-top: px(140);
+}
+
+.box_full, .box_inner {
+  background-color: #fff;
+  padding-left: px(50);
+  padding-right: px(50);
+}
+
+.box_full {
+  margin-top: px(20);
+}
+
+.box_inner {
+  width: calc(100% - #{px(100)});
+  margin: px(40) auto 0;
+}
+
 .box_radius {
   width: 100%;
   background: #fff;
   border: 1px solid #ccc;
-  padding: 24px;
-  border-radius: 8px;
+  padding: px(24);
+  border-radius: px(8);
 }

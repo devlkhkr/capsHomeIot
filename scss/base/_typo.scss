@@ -1,0 +1,36 @@
+html {
+    font-family: $nns;
+    font-weight: 400;
+    letter-spacing: px(-1.8);
+    color: #030303;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.subtit_fs_45{
+    font-size: px(45);
+    font-weight: 700;
+}
+
+.subtit_fs_46{
+    font-size: px(46);
+    font-weight: 400;
+}
+
+.notice_gray{
+    color: #989898;
+    font-size: px(40);
+    // padding-left: px(23);
+    &::before{
+        content: "";
+        display: inline-block;
+        width: px(6);
+        height: px(6);
+        background-color: #989898;
+        vertical-align: middle;
+        margin-right: px(17);
+    }
+}

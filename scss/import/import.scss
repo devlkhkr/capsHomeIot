@@ -1,10 +1,15 @@
 @import "../abstracts/mixins";
 @import "../abstracts/vars";
+@import "../abstracts/functions";
 
 @import "../base/reset";
+@import "../base/font";
 @import "../base/typo";
+@import "../base/inline";
 
 @import "../components/sample";
+@import "../components/form";
+@import "../components/layer";
 
 @import "../layout/header";
 @import "../layout/box";

@@ -1,0 +1,36 @@
+.caps_home_header{
+    display: inline-block;
+    width: 100%;
+    height: px(140);
+    padding: 0 px(50);
+    line-height: px(130);
+    background-color: #fff;
+    border-bottom: 4px solid #e5e5e5;
+    position: fixed;
+    left:0;
+    top: 0;
+    .tit_header{
+        font-size: px(55);
+        font-weight: 700;
+        text-align: center;
+    }
+    i.icon_header_back, i.icon_header_menu{
+        position: absolute;
+        top: 50%;
+    }
+    i.icon_header_back{
+        width: px(28);
+        height: px(48);
+        left: px(50);
+        background-image: url(../../images/icon_arr_right.png);
+        transform: rotate(180deg) translate(0, 50%);
+        @include bgfull;
+    }
+    i.icon_header_menu {
+        width: px(66);
+        height: px(40);
+        right: px(50);
+        transform: translate(0, -50%);
+        background-color: red;
+    }
+}
