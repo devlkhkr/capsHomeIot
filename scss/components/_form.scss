@@ -25,7 +25,7 @@ input[type="text"] {
         font-size: px(36);
         font-weight: 700;
         color: #fff;
-        right: px(24);
+        right: px(34);
         top: 50%;
         transform: translate(0, -50%);
     }
@@ -47,11 +47,11 @@ input[type="text"] {
         &::before{
             content: "ON";
             right: unset;
-            left: px(24);
+            left: px(30);
         }
         &::after{
             border-color: #2254f3;
-            left: px(89);
+            left: px(102);
         }
     }
 

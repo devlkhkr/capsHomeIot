@@ -350,7 +350,7 @@ input[type="text"] {
   font-size: calc(36rem / 48);
   font-weight: 700;
   color: #fff;
-  right: calc(24rem / 48);
+  right: calc(34rem / 48);
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -380,12 +380,12 @@ input[type="text"] {
 .check_type_01:checked::before {
   content: "ON";
   right: unset;
-  left: calc(24rem / 48);
+  left: calc(30rem / 48);
 }
 
 .check_type_01:checked::after {
   border-color: #2254f3;
-  left: calc(89rem / 48);
+  left: calc(102rem / 48);
 }
 
 input,
