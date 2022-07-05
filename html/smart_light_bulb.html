@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="../css/import.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.range.js"></script>
+    <script src="../js/timepicker.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/reinvented-color-wheel.js"></script>
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="wrapper_caps_home"> 
+      <div class="caps_home_header"><i class="icon_header_back"></i>
+        <h2 class="tit_header">거실스마트전구(컬러)</h2><a class="btn_header_edit">편집</a>
+      </div>
+      <div class="default_pb">
+        <div class="box_radius pt_100 pb_100">
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_50">켜짐</div>
+            </div>
+            <div class="tar">
+              <input class="check_type_01" type="checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="box_radius pt_100 pb_100">
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_50">화이트모드</div>
+            </div>
+            <div class="tar">
+              <input class="check_type_01" type="checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="box_radius pt_60 pb_85">
+          <div class="subtit_fs_50 pb_60">컬러설정</div>
+          <div class="wrapper_color_picker">
+            <div class="bg_bulb"></div>
+            <div class="picked_color_layer" id="pickedColorLayer"></div>
+            <div id="colorpicker"></div>
+          </div>
+          <div class="range_type_01 pt_80">
+            <div class="area_value">
+              <div class="tit_value">밝기</div>
+              <div class="detail_value" id="light_value">0</div>
+            </div>
+            <div class="area_range">
+              <div class="wrapper_range hide_scale" id="range1">
+                <input type="hidden" value="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //- S : color picker
+  var pickedColorLayer = document.getElementById("pickedColorLayer"); // 선택된 색상으로 설정 되는 타겟 DOM (전구 뒤에 존재)
+  var defaultColor = { //초기 색상 설정
+    hex: "#0061ff"
+  };
+  pickedColorLayer.style.backgroundColor = defaultColor.hex; // 전구 초기 색상 세팅
+  
+  var colorpicker = new ReinventedColorWheel({ // colorpicker 렌더
+    appendTo: document.getElementById('colorpicker'),
+    wheelDiameter: 230, // picker 지름
+    wheelThickness: 30, // 휠 굵기
+    handleDiameter: 26, // 핸들 크기
+    wheelReflectsSaturation: false, //채도반영
+    hex: defaultColor.hex, // colorpicker 초기 색상 세팅
+    onChange: function (color) { // 색상 변경시마다 전구색상 세팅
+      pickedColorLayer.style.backgroundColor = color.hex;
+    },
+  })
+  //- E : color picker
+  
+  //- S : range
+  $('#range1 input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0, 100],
+    format: '',
+    width: $("#range1").width(),
+    showLabels: false,
+    snap: true,
+    onstatechange: function () {
+      $("#light_value").text(this.getValue())
+    }
+  });
+  //- E : range
+</script>

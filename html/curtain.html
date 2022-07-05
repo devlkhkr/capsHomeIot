@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="../css/import.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.range.js"></script>
+    <script src="../js/timepicker.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/reinvented-color-wheel.js"></script>
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="wrapper_caps_home"> 
+      <div class="caps_home_header"><i class="icon_header_back"></i>
+        <h2 class="tit_header">거실 커튼 1</h2><a class="btn_header_edit">편집</a>
+      </div>
+      <div class="default_pb">
+        <div class="box_radius pt_100 pb_100">
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_50">켜짐</div>
+            </div>
+            <div class="tar">
+              <input class="check_type_01" type="checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="box_radius pt_100 pb_100">
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_50">화이트모드</div>
+            </div>
+            <div class="tar">
+              <input class="check_type_01" type="checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="box_radius pt_60 pb_66">
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_50">커튼 열림 설정</div>
+            </div>
+            <div class="tar">
+              <div class="txt_curtain_state"><span id="curtain_percent">50</span>% 열림</div>
+            </div>
+          </div>
+          <div class="notice_gray pt_24 pb_60 fs_36">커튼의열림정도를설정합니다.</div>
+          <div class="wrapper_curtain mb_120">
+            <div class="image_curtain"><img src="../images/curtain.png" alt="curtain image"></div>
+          </div>
+          <div class="range_type_03">
+            <div class="wrapper_range" id="range1">
+              <input type="hidden" value="50">
+            </div>
+          </div>
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_40">닫힘</div>
+            </div>
+            <div class="tar">
+              <div class="subtit_fs_40">열림</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //- S : range
+  $('#range1 input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0, 25, 50, 75, 100],
+    format: '%s',
+    width: $("#range1").width(),
+    showLabels: false,
+    snap: true,
+    onstatechange: function () {
+      $("#curtain_percent").text(this.getValue())
+    }    
+  });
+  //- E : range
+</script>

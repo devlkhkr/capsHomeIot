@@ -1,0 +1,50 @@
+.range_type_01, .range_type_02{
+  .scale{
+    display: none;
+  }
+}
+.range_type_01{
+  font-size: 0;
+  .area_value, .area_range{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .area_value{
+    width: px(140);
+    margin-right: px(44);
+    text-align: center;
+    line-height: 1.22;
+    .tit_value, .detail_value{
+      font-size: px(45);
+      font-weight: 700;
+    }
+    .tit_value{
+
+    }
+    .detail_value{
+      color: #2254f3;
+    }
+  }
+  .area_range{
+    width: calc(100% - #{px(223)});
+  }
+}
+
+.range_type_03 {
+  width: calc(100% - #{px(80)});
+  padding-bottom: px(130);
+  margin: 0 auto;
+  .scale{
+    // width: calc(100% - #{px(40)});
+    top: 0!important;
+    span{
+      border-left: 0!important;
+      ins{
+        font-size: px(42);
+        font-weight: 400;
+        color: #030303;
+        top: px(54);
+      }
+    }
+  }
+}

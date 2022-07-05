@@ -5,7 +5,7 @@
     padding: 0 px(50);
     line-height: px(130);
     background-color: #fff;
-    border-bottom: 4px solid #e5e5e5;
+    border-bottom: px(4) solid #e5e5e5;
     position: fixed;
     left:0;
     top: 0;
@@ -32,7 +32,6 @@
         height: px(40);
         right: px(50);
         transform: translate(0, -50%);
-        background-color: red;
     }
     .btn_header_edit{
         position: absolute;

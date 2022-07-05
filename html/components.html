@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Caps home iot components</title>
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/jquery.range.js"></script>
     <script src="../js/timepicker.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/reinvented-color-wheel.js"></script>
     <script src="//unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script>
     <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css">
-    <script src="../js/reinvented-color-wheel.js"></script>
     <link href="../css/import.css" rel="stylesheet">
   </head>
   <body> 
@@ -24,7 +24,8 @@
           <div class="bg_bulb"></div>
           <div class="picked_color_layer" id="pickedColorLayer"></div>
           <div id="colorpicker"></div>
-          <pre> <code class="language-javascript hljs"> var pickedColorLayer = document.getElementById("pickedColorLayer"); // 선택된 색상으로 설정 되는 타겟 DOM (전구 뒤에 존재)
+        </div>
+        <pre> <code class="language-javascript hljs"> var pickedColorLayer = document.getElementById("pickedColorLayer"); // 선택된 색상으로 설정 되는 타겟 DOM (전구 뒤에 존재)
 var setBulbColor = function (color) { //rgb css 형식으로 return 해주는 함수
 return "rgb(" + color.rgb[0] + "," + color.rgb[1] + "," + color.rgb[2]  + ")";}
 var defaultColor = { //초기 색상 설정
@@ -41,7 +42,6 @@ var colorpicker = new ReinventedColorWheel({ // colorpicker 렌더
    pickedColorLayer.style.backgroundColor = setBulbColor(color);
  },
 })</code></pre>
-        </div>
       </div>
       <div class="wrapper_sapmle">
         <div class="tit_sample">Date Picker </div>
@@ -58,13 +58,30 @@ var colorpicker = new ReinventedColorWheel({ // colorpicker 렌더
       <div class="wrapper_sapmle">
         <div class="tit_sample">Range</div>
         <div class="box_sample">
-          <div class="wrapper_range" id="range1"> 
-            <input type="hidden" value="0">
+          <div class="range_type_02">
+            <div class="wrapper_range" id="range1"> 
+              <input type="hidden" value="0">
+            </div>
           </div>
         </div>
         <div class="box_sample">
-          <div class="wrapper_range" id="range2"> 
-            <input type="hidden" value="0">
+          <div class="range_type_03">
+            <div class="wrapper_range" id="range2"> 
+              <input type="hidden" value="0">
+            </div>
+          </div>
+        </div>
+        <div class="box_sample">
+          <div class="range_type_01">
+            <div class="area_value">
+              <div class="tit_value">밝기</div>
+              <div class="detail_value" id="light_value">0</div>
+            </div>
+            <div class="area_range">
+              <div class="wrapper_range" id="range3">
+                <input type="hidden" value="0">
+              </div>
+            </div>
           </div>
         </div>
         <pre> <code class="language-javascript hljs">$('#range1 input').jRange({
@@ -151,8 +168,22 @@ $('#range2 input').jRange({
     scale: [0, 25, 50, 75, 100],
     format: '%s',
     width: $("#range2").width(),
-    showLabels: true,
+    showLabels: false,
     snap: true
+  });
+  
+  $('#range3 input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0, 100],
+    format: '%s',
+    width: $("#range3").width(),
+    showLabels: false,
+    snap: true,
+    onstatechange: function () {
+      $("#light_value").text(this.getValue())
+    }    
   });
   //- E : range
 </script>

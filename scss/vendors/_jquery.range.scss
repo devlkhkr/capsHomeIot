@@ -63,32 +63,32 @@
   cursor: auto;
 }
 .theme-green .back-bar {
-  height: 5px;
-  border-radius: 2px;
-  background-color: #eeeeee;
-  background-color: #e7e7e7;
-  background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#dddddd));
-  background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
-  background-image: -o-linear-gradient(top, #eeeeee, #dddddd);
-  background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffdddddd', GradientType=0);
+  height: px(20);
+  border-radius: px(10);
+  // background-color: #eeeeee;
+  background-color: #e6e6e6;
+  // background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
+  // background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#dddddd));
+  // background-image: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+  // background-image: -o-linear-gradient(top, #eeeeee, #dddddd);
+  // background-image: linear-gradient(to bottom, #eeeeee, #dddddd);
+  // background-repeat: repeat-x;
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffdddddd', GradientType=0);
 }
 .theme-green .back-bar .selected-bar {
-  border-radius: 2px;
-  background-color: #2154f3;
+  border-radius: px(10);
+  background-color: #2254f3;
 }
 .theme-green .back-bar .pointer {
-  width: 14px;
-  height: 14px;
-  top: -5px;
+  width: px(78);
+  height: px(78);
+  top: px(-30);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 10px;
-  border: 1px solid #AAA;
-  background-color: #e7e7e7;
+  border-radius: 100%;
+  border: px(6) solid #2254f3;
+  background-color: #fff;
 }
 .theme-green .back-bar .pointer-label {
   color: #999;
@@ -104,7 +104,7 @@
 }
 .theme-blue .back-bar {
   height: 5px;
-  border-radius: 2px;
+  border-radius: px(10);
   background-color: #eeeeee;
   background-color: #e7e7e7;
   background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
@@ -116,7 +116,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffdddddd', GradientType=0);
 }
 .theme-blue .back-bar .selected-bar {
-  border-radius: 2px;
+  border-radius: px(10);
   background-color: #92c1f9;
   background-image: -moz-linear-gradient(top, #b1d1f9, #64a8f9);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b1d1f9), to(#64a8f9));

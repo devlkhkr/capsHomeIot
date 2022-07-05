@@ -1,0 +1,85 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="../css/import.css" rel="stylesheet")
+        script(src="../js/jquery.js")
+        script(src="../js/jquery-ui.js")
+        script(src="../js/jquery.range.js")
+        script(src="../js/timepicker.js")
+        script(src="../js/common.js")
+        script(src="../js/reinvented-color-wheel.js")
+        title Document
+    body 
+        .wrapper_caps_home 
+            .caps_home_header
+                i.icon_header_back
+                h2.tit_header 거실스마트전구(컬러)
+                a.btn_header_edit 편집
+            .default_pb
+              .box_radius.pt_100.pb_100
+                  .wrapper_align_lr
+                      .tal
+                          .subtit_fs_50 켜짐
+                      .tar
+                          input(type="checkbox").check_type_01
+
+              .box_radius.pt_100.pb_100
+                  .wrapper_align_lr
+                      .tal
+                          .subtit_fs_50 화이트모드
+                      .tar
+                          input(type="checkbox").check_type_01
+              .box_radius.pt_60.pb_85
+                .subtit_fs_50.pb_60 컬러설정
+                .wrapper_color_picker
+                  .bg_bulb
+                  #pickedColorLayer.picked_color_layer
+                  #colorpicker
+                .range_type_01.pt_80
+                  .area_value
+                    .tit_value 밝기
+                    #light_value.detail_value 0
+                  .area_range
+                    .wrapper_range(id="range1").hide_scale
+                      input(type="hidden" value="0")
+                
+script.
+
+  //- S : color picker
+  var pickedColorLayer = document.getElementById("pickedColorLayer"); // 선택된 색상으로 설정 되는 타겟 DOM (전구 뒤에 존재)
+  var defaultColor = { //초기 색상 설정
+    hex: "#0061ff"
+  };
+  pickedColorLayer.style.backgroundColor = defaultColor.hex; // 전구 초기 색상 세팅
+
+  var colorpicker = new ReinventedColorWheel({ // colorpicker 렌더
+    appendTo: document.getElementById('colorpicker'),
+    wheelDiameter: 230, // picker 지름
+    wheelThickness: 30, // 휠 굵기
+    handleDiameter: 26, // 핸들 크기
+    wheelReflectsSaturation: false, //채도반영
+    hex: defaultColor.hex, // colorpicker 초기 색상 세팅
+    onChange: function (color) { // 색상 변경시마다 전구색상 세팅
+      pickedColorLayer.style.backgroundColor = color.hex;
+    },
+  })
+  //- E : color picker
+
+  //- S : range
+  $('#range1 input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0, 100],
+    format: '',
+    width: $("#range1").width(),
+    showLabels: false,
+    snap: true,
+    onstatechange: function () {
+      $("#light_value").text(this.getValue())
+    }
+  });
+  //- E : range

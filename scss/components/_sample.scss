@@ -1,28 +1,33 @@
 .wrapper_component_samples{
   width: 100%;
-  padding: 20px;
+  padding: px(50);
   background-color: #edeef0;
 }
 .wrapper_sapmle{
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  padding-bottom: px(30);
+  margin-bottom: px(30);
   pre{
-    margin: 20px 0;
+    margin: px(20) 0;
     width: 100%;
+    font-size: px(45);
+    line-height: 1.2;
   }
 }
 .tit_sample {
-  font-size: 20px;
+  font-size: px(45);
   font-weight: bold;
-  padding-bottom: 16px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  padding-bottom: px(45);
+  margin-bottom: px(45);
+  border-bottom: px(4) solid #ccc;
 }
 
 .box_sample {
   width: 100%;
   background: #fff;
-  border: 1px solid #ccc;
-  padding: 30px;
-  border-radius: 10px;
+  border: px(4) solid #ccc;
+  padding: px(80);
+  border-radius: px(30);
+  & + .box_sample {
+    margin-top: px(40);
+  }
 }

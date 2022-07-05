@@ -10,8 +10,8 @@ html, body {
     height: 100%;
 }
 
-.subtit_fs_45{
-    font-size: px(45);
+.subtit_fs_40{
+    font-size: px(40);
     font-weight: 700;
 }
 
@@ -19,6 +19,11 @@ html, body {
     font-size: px(42);
     font-weight: 400;
     color: #666;
+}
+
+.subtit_fs_45{
+    font-size: px(45);
+    font-weight: 700;
 }
 
 .subtit_fs_46{
@@ -46,12 +51,20 @@ html, body {
             margin-right: px(17);
         }
     }
+    &.fs_36{
+        font-size: px(36);
+    }
 }
 
 .txt_battery_state{
     font-size: px(45);
     font-weight: 800;
-    color: #ff3333;
+    &.full{
+        color: #2254f3;
+    }
+    &.low{
+        color: #ff3333;
+    }
 }
 
 .txt_model_name{
@@ -60,4 +73,10 @@ html, body {
     color: #2254f3;
     text-align: center;
     padding-top: px(112);
+}
+
+.txt_curtain_state{
+    font-size: px(42);
+    font-weight: 700;
+    color: #2254f3;
 }

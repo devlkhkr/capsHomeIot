@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
         link(href="../css/import.css" rel="stylesheet")
         script(src="../js/jquery.js")
         script(src="../js/jquery-ui.js")
@@ -44,12 +44,12 @@ html(lang="en")
                 .subtit_fs_45.pb_56 기간 설정
                 .type_input_date 
                     .subtit_fs_46 시작
-                    input(type="text" value="2022-07-01")#startDate.input_date
-                    input(type="text")#startTime.input_time
+                    input(type="text" value="2022-07-01" readonly)#startDate.input_date
+                    input(type="text" readonly)#startTime.input_time
                 .type_input_date 
                     .subtit_fs_46 종료
-                    input(type="text" value="2022-07-01")#endDate.input_date
-                    input(type="text")#endTime.input_time
+                    input(type="text" value="2022-07-01" readonly)#endDate.input_date
+                    input(type="text" readonly)#endTime.input_time
                 .partition_ec.mt_75.mb_92
                 .subtit_fs_45.pb_56 비밀번호설정
                 .type_input_button
