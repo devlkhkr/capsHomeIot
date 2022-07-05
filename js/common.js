@@ -20,6 +20,7 @@ var rangeChange = function(input){
 }
 
 var openLayer = function(dataLayer) {
+  $("body").addClass("ofh");
   $("[data-layer]").removeClass("on");
   $(".wrapper_layer_popup").addClass("on")
   $("[data-layer=" + dataLayer + "]").eq(0).addClass("on");
@@ -28,4 +29,5 @@ var openLayer = function(dataLayer) {
 var closeLayer = function() {
   $(".wrapper_layer_popup").removeClass("on");
   $("[data-layer]").removeClass("on");
+  $("body").removeClass("ofh");
 }
