@@ -20,17 +20,30 @@ html, body {
     font-weight: 400;
 }
 
+.subtit_fs_50{
+    font-size: px(50);
+    font-weight: 700;
+}
+
 .notice_gray{
     color: #989898;
     font-size: px(40);
-    // padding-left: px(23);
-    &::before{
-        content: "";
-        display: inline-block;
-        width: px(6);
-        height: px(6);
-        background-color: #989898;
-        vertical-align: middle;
-        margin-right: px(17);
+    line-height: 1.25;
+    &.before_dot{
+        &::before{
+            content: "";
+            display: inline-block;
+            width: px(6);
+            height: px(6);
+            background-color: #989898;
+            vertical-align: middle;
+            margin-right: px(17);
+        }
     }
+}
+
+.txt_battery_state{
+    font-size: px(45);
+    font-weight: 800;
+    color: #ff3333;
 }

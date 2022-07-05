@@ -1,0 +1,35 @@
+ul.wrapper_used_history{
+    li{
+        padding: px(50) 0;
+        font-size: 0;
+        border-bottom: px(3) solid #ececec;
+        > div {
+            display: inline-block;
+            width: 50%;
+        }
+        span{
+            font-size: px(40);
+            color: #666;
+        }
+        .history_time, .history_state{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: px(3);
+                height: px(32);
+                background-color: #ececec;
+                margin-left: px(24);
+                margin-right: px(24);
+                vertical-align: middle;
+            }
+        }
+        .history_state{
+            &.closed{
+                color: #ff3333;
+            }
+            &.opened{
+                color: #2254f3;
+            }
+        }
+    }
+}

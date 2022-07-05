@@ -9,6 +9,54 @@ input[type="text"] {
     color: #030303;
 }
 
+.check_type_01{
+    appearance: none;
+    display: inline-block;
+    width: px(154);
+    height: px(54);
+    border-radius: px(30);
+    background-color: #bfbfbf;
+    position: relative;
+    &::before, &::after{
+        position: absolute;
+    }
+    &::before{
+        content: "Off";
+        font-size: px(36);
+        font-weight: 700;
+        color: #fff;
+        right: px(24);
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    &::after{
+        content: "";
+        width: px(78);
+        height: px(78);
+        background: #fff;
+        border: px(6) solid #bfbfbf;
+        box-sizing: border-box;
+        left: px(-26);
+        top: 50%;
+        transform: translate(0, -50%);
+        border-radius: 100%;
+        transition-duration: .3s;
+    }
+    &:checked{
+        background-color: #2254f3;
+        &::before{
+            content: "ON";
+            right: unset;
+            left: px(24);
+        }
+        &::after{
+            border-color: #2254f3;
+            left: px(89);
+        }
+    }
+
+}
+
 input,
 button {
     border-radius: px(16);
@@ -48,15 +96,46 @@ button {
     color: #fff;
 }
 
+.btn_more {
+    font-size: px(48);
+    font-weight: 700;
+    color: #474747;
+    padding: px(48) 0;
+    text-align: center;
+    span, .icon_more{
+        vertical-align: text-bottom;
+    }
+    .icon_more{
+        width: px(60);
+        height: px(60);
+        border: 1px solid #333;
+        border-radius: 100%;
+        position: relative;
+        margin-left: px(42);
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: px(30);
+            height: px(2);
+            background: #333;
+            left: 50%;
+            top: 50%;
+        }
+        &::after{
+            transform: translate(-50%, -50%);
+        }
+        &::before{
+            transform: translate(calc(-50% + #{px(2)}), -50%) rotate(90deg);
+        }
+    }
+}
+
 .input_date {
     background-image: url(../../images/icon_cal.png);
     background-repeat: no-repeat;
     background-size: px(46);
     background-position: center right px(32);
-}
-
-.input_time {
-
 }
 
 .input_random {

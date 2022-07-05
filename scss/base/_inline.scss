@@ -2,8 +2,44 @@
     overflow: hidden;
 }
 
+.tal{
+    text-align: left;
+}
+
+.tac{
+    text-align: center;
+}
+
+.tar{
+    text-align: right;
+}
+
+.pt_20{
+    padding-top: px(20);
+}
+
+.pt_36 {
+    padding-top: px(36);
+}
+
+.pt_50 {
+    padding-top: px(50);
+}
+
+.pt_80 {
+    padding-top: px(80);
+}
+
+.pt_94 {
+    padding-top: px(94);
+}
+
 .pt_98 {
     padding-top: px(98);
+}
+
+.pt_100 {
+    padding-top: px(100);
 }
 
 .pt_124 {
@@ -14,6 +50,14 @@
     padding-top: px(132);
 }
 
+.pt_166 {
+    padding-top: px(166);
+}
+
+.pb_50 {
+    padding-bottom: px(50);
+}
+
 .pb_56 {
     padding-bottom: px(56);
 }
@@ -22,8 +66,16 @@
     padding-bottom: px(60);
 }
 
+.pb_64 {
+    padding-bottom: px(64);
+}
+
 .pb_66 {
     padding-bottom: px(66);
+}
+
+.pb_100 {
+    padding-bottom: px(100);
 }
 
 .pb_130 {
@@ -44,6 +96,18 @@
 
 .pb_164 {
     padding-bottom: px(164);
+}
+
+.pb_200 {
+    padding-bottom: px(200);
+}
+
+.mt_38 {
+    margin-top: px(38);
+}
+
+.mt_50 {
+    margin-top: px(50);
 }
 
 .mt_75 {
@@ -68,10 +132,6 @@
 
 .mb_92 {
     margin-bottom: px(92);
-}
-
-.pb_200 {
-    padding-bottom: px(200);
 }
 
 .partition_ec {
