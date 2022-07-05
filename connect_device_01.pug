@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="../css/import.css" rel="stylesheet")
+        script(src="../js/jquery.js")
+        script(src="../js/jquery-ui.js")
+        script(src="../js/jquery.range.js")
+        script(src="../js/timepicker.js")
+        script(src="../js/common.js")
+        title Document
+    body
+        .wrapper_caps_home 
+            .caps_home_header
+                i.icon_header_back
+                h2.tit_header 기기 연결
+                a.btn_header_edit 편집
+            .box_radius.pt_64.pb_85
+                .info_comp 
+                    .comp_logo
+                        img(src="../images/hej.png" alt="hej logo")  
+                    .subtit_fs_50 헤이홈
+                .subtit_fs_45.pt_50.pb_72 연결된 기기
+                ul.wrapper_device_list
+                    li
+                        span.icon_device
+                            img(src="../images/icon_iot_01.png")
+                        span.subtit_fs_42 스마트전구(컬러)
+                    li
+                        span.icon_device
+                            img(src="../images/icon_iot_02.png")
+                        span.subtit_fs_42 스마트조명스위치(3구)
+            .support_device_list 
+                .subtit_fs_45.pb_40 지원되는 제품
+                ul.wrapper_support_type 
+                    li 스마트 조명 스위치
+                    li 브런트 플러그
+                    li 스마트 릴레이 컨트롤러
+                    li 스마트 버튼
+                    li 스마트 전동 커튼
+                    li 이 외의 제품은 디스크립션 참고
+                .notice_red 지원되지 않는 제품은 캡스홈 앱에서 연동/제어가 불가합니다.
+            .wrapper_bottom_btns
+                button(type="button").btn_wid_full.btn_lblue 확인
+                
+script.
+

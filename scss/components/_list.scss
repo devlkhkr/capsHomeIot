@@ -60,7 +60,7 @@ ul.wrapper_used_history{
     li{
         font-size: 0;
         & + li{
-            border-top: px(3) solid #ececec;
+            margin-top: px(55);
         }
         .icon_device, .subtit_fs_42{
             display: inline-block;
@@ -69,11 +69,11 @@ ul.wrapper_used_history{
         .icon_device{
             width: px(100);
             height: px(100);
-            background-color: #222;
             border-radius: 100%;
             img{
-
+                width: 100%;
             }
+            
         }
         .subtit_fs_42{
             margin-left: px(32);
@@ -105,5 +105,73 @@ ul.wrapper_used_history{
         & + li {
             border-top: px(3) solid #f3f3f3;
         }
+    }
+}
+
+.wrapper_support_type{
+    margin-bottom: px(67);
+    li{
+        font-size: px(40);
+        color: #78797b;
+        & + li {
+            margin-top: px(40);
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: px(6);
+            height: px(6);
+            background-color: #78797b;
+            border-radius: 100%;
+            vertical-align: middle;
+            margin-right: px(18);
+        }
+    }
+}
+
+.assc_device_list{
+    .wrapper_align_lr{
+        padding: px(48) 0;
+        & + .wrapper_align_lr{
+            border-top: px(3) solid #ececec;
+        }
+    }
+    .assc_thumb, .assc_desc{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .assc_thumb{
+        width: px(100);
+        height: px(100);
+        img{
+            width: 100%;
+        }
+    }
+    .assc_desc{
+        width: calc(100% - #{px(100)});
+        padding-left: px(58);
+        .assc_name{
+            font-size: px(42);
+        }
+        .assc_state{
+            font-size: px(36);
+            color: #989898;
+        }
+    }
+}
+
+.link_more{
+    font-size: px(42);
+    color: #797979;
+    &::after{
+        content: "";
+        display: inline-block;
+        width: px(16);
+        height: px(28);
+        background-image: url(../../images/icon_arr_right.png);
+        @include bgfull;
+        opacity: .5;
+        vertical-align: middle;
+        margin-left: px(20);
     }
 }

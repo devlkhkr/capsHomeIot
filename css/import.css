@@ -267,6 +267,10 @@ html, body {
   padding-bottom: calc(38rem / 48);
 }
 
+.pb_40 {
+  padding-bottom: calc(40rem / 48);
+}
+
 .pb_50 {
   padding-bottom: calc(50rem / 48);
 }
@@ -846,7 +850,7 @@ ul.wrapper_used_history li .history_state.opened {
 }
 
 .wrapper_device_list li + li {
-  border-top: calc(3rem / 48) solid #ececec;
+  margin-top: calc(55rem / 48);
 }
 
 .wrapper_device_list li .icon_device, .wrapper_device_list li .subtit_fs_42 {
@@ -857,8 +861,11 @@ ul.wrapper_used_history li .history_state.opened {
 .wrapper_device_list li .icon_device {
   width: calc(100rem / 48);
   height: calc(100rem / 48);
-  background-color: #222;
   border-radius: 100%;
+}
+
+.wrapper_device_list li .icon_device img {
+  width: 100%;
 }
 
 .wrapper_device_list li .subtit_fs_42 {
@@ -896,6 +903,85 @@ ul.wrapper_used_history li .history_state.opened {
 
 .table_support_device li + li {
   border-top: calc(3rem / 48) solid #f3f3f3;
+}
+
+.wrapper_support_type {
+  margin-bottom: calc(67rem / 48);
+}
+
+.wrapper_support_type li {
+  font-size: calc(40rem / 48);
+  color: #78797b;
+}
+
+.wrapper_support_type li + li {
+  margin-top: calc(40rem / 48);
+}
+
+.wrapper_support_type li::before {
+  content: "";
+  display: inline-block;
+  width: calc(6rem / 48);
+  height: calc(6rem / 48);
+  background-color: #78797b;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-right: calc(18rem / 48);
+}
+
+.assc_device_list .wrapper_align_lr {
+  padding: calc(48rem / 48) 0;
+}
+
+.assc_device_list .wrapper_align_lr + .wrapper_align_lr {
+  border-top: calc(3rem / 48) solid #ececec;
+}
+
+.assc_device_list .assc_thumb, .assc_device_list .assc_desc {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.assc_device_list .assc_thumb {
+  width: calc(100rem / 48);
+  height: calc(100rem / 48);
+}
+
+.assc_device_list .assc_thumb img {
+  width: 100%;
+}
+
+.assc_device_list .assc_desc {
+  width: calc(100% - calc(100rem / 48));
+  padding-left: calc(58rem / 48);
+}
+
+.assc_device_list .assc_desc .assc_name {
+  font-size: calc(42rem / 48);
+}
+
+.assc_device_list .assc_desc .assc_state {
+  font-size: calc(36rem / 48);
+  color: #989898;
+}
+
+.link_more {
+  font-size: calc(42rem / 48);
+  color: #797979;
+}
+
+.link_more::after {
+  content: "";
+  display: inline-block;
+  width: calc(16rem / 48);
+  height: calc(28rem / 48);
+  background-image: url(../../images/icon_arr_right.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  opacity: .5;
+  vertical-align: middle;
+  margin-left: calc(20rem / 48);
 }
 
 .range_type_01 .scale, .range_type_02 .scale {
@@ -1065,7 +1151,7 @@ ul.wrapper_used_history li .history_state.opened {
   padding-right: calc(80rem / 48);
 }
 
-.support_device_list .subtit_fs_45 {
+.support_device_list .txt_underline {
   text-decoration: underline;
 }
 
