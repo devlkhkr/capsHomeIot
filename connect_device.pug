@@ -1,0 +1,101 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="../css/import.css" rel="stylesheet")
+        script(src="../js/jquery.js")
+        script(src="../js/jquery-ui.js")
+        script(src="../js/jquery.range.js")
+        script(src="../js/timepicker.js")
+        script(src="../js/common.js")
+        title Document
+    body 
+        .wrapper_layer_popup
+            #layer_mask
+            .layer_box(data-layer="support_device_list")
+                .layer_header
+                    .subtit_fs_45 지원가능제품
+                    .btn_layer_close(onclick="closeLayer()")
+                .layer_scroll
+                    ul.table_support_device
+                        li.support_thead 
+                            span 제품명
+                            span 제품타입
+                            span 브랜드
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+                        li
+                            span WSP-2500B
+                            span 무타공푸시풀
+                            span WELKOM
+        .wrapper_caps_home 
+            .caps_home_header
+                i.icon_header_back
+                h2.tit_header 기기 연결
+                a.btn_header_edit 편집
+            .box_radius.pt_64.pb_85
+                .info_comp 
+                    .comp_logo
+                        img(src="../images/solity.png" alt="solity logo")  
+                    .subtit_fs_50 솔리티
+                .subtit_fs_45.pt_50.pb_72 연결된 기기
+                ul.wrapper_device_list
+                    li
+                        span.icon_device
+                        span.subtit_fs_42 도어락
+            .support_device_list 
+                .subtit_fs_45.pb_72(onclick="openLayer('support_device_list')") 지원가능제품명보기
+                .notice_red 지원되지 않는 제품은 캡스홈 앱에서 연동/제어가 불가합니다.
+            .wrapper_bottom_btns
+                button(type="button").btn_wid_full.btn_lblue 확인
+                
+script.
+

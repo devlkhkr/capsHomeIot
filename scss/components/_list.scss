@@ -2,7 +2,9 @@ ul.wrapper_used_history{
     li{
         padding: px(50) 0;
         font-size: 0;
-        border-bottom: px(3) solid #ececec;
+        & + li{
+            border-top: px(3) solid #ececec;
+        }
         > div {
             display: inline-block;
             width: 50%;
@@ -30,6 +32,78 @@ ul.wrapper_used_history{
             &.opened{
                 color: #2254f3;
             }
+        }
+    }
+}
+
+.info_comp{
+    padding-bottom: px(52);
+    border-bottom: px(3) solid #ececec;
+    .comp_logo, .subtit_fs_50 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .comp_logo{
+        width: px(124);
+        height: px(124);
+        font-size: 0;
+        img{
+            width: 100%;
+        }
+    }
+    .subtit_fs_50{
+        margin-left: px(32);
+    }
+}
+
+.wrapper_device_list{
+    li{
+        font-size: 0;
+        & + li{
+            border-top: px(3) solid #ececec;
+        }
+        .icon_device, .subtit_fs_42{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon_device{
+            width: px(100);
+            height: px(100);
+            background-color: #222;
+            border-radius: 100%;
+            img{
+
+            }
+        }
+        .subtit_fs_42{
+            margin-left: px(32);
+        }
+    }
+}
+
+.table_support_device{
+    padding: 0 px(60) px(20);
+    li{
+        display: inline-block;
+        width: 100%;
+        padding: px(43) 0;
+        &.support_thead{
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            span{
+                font-size: px(40);
+                font-weight: 700;
+            }
+        }
+        span{
+            display: inline-block;
+            font-size: px(35);
+            width: calc(100% / 3);
+            text-align: center;
+        }
+        & + li {
+            border-top: px(3) solid #f3f3f3;
         }
     }
 }

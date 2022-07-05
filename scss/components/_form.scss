@@ -78,6 +78,10 @@ input[type="text"],
     width: px(380);
 }
 
+.btn_wid_full {
+    width: 100%;
+}
+
 button {
     border: px(3) solid transparent;
     vertical-align: middle;
@@ -191,6 +195,9 @@ button {
     width: 100%;
     text-align: center;
     padding-bottom: px(200);
+    padding-left: px(50);
+    padding-right: px(50);
+    margin-top: px(200);
     &.pos_abs_btm{
         position: absolute;
         bottom: 0;

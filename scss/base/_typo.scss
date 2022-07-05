@@ -36,8 +36,13 @@ html, body {
     font-weight: 700;
 }
 
-.notice_gray{
-    color: #989898;
+[class*=notice_]{
+    &.notice_gray{
+        color: #989898;
+    }
+    &.notice_red{
+        color: #cc3333;
+    }
     font-size: px(40);
     line-height: 1.25;
     &.before_dot{
@@ -55,6 +60,7 @@ html, body {
         font-size: px(36);
     }
 }
+
 
 .txt_battery_state{
     font-size: px(45);

@@ -15,20 +15,23 @@ html(lang="en")
         .wrapper_layer_popup
             #layer_mask
             .layer_box(data-layer="visitor-key-confirm")
-                .tit_layer.pt_98.pb_66 방문자키발급
-                .desc_layer.pb_140 입력한휴대폰 번호로<br />방문자 키가SMS 발송됩니다
-                .wrapper_layer_ctrl.pb_60
-                    a.layer_ctrl_gray(onclick="closeLayer()") 취소
-                    a.layer_ctrl_blue(onclick="openLayer('visitor-key-done')") 확인
+                .layer_inner
+                    .tit_layer.pt_98.pb_66 방문자키발급
+                    .desc_layer.pb_140 입력한휴대폰 번호로<br />방문자 키가SMS 발송됩니다
+                    .wrapper_layer_ctrl.pb_60
+                        a.layer_ctrl_gray(onclick="closeLayer()") 취소
+                        a.layer_ctrl_blue(onclick="openLayer('visitor-key-done')") 확인
             .layer_box(data-layer="visitor-key-done")
-                .desc_layer.pt_132.pb_190 방문자 키가발급되었습니다
-                .wrapper_layer_ctrl.pb_60
-                    a.layer_ctrl_blue(onclick="closeLayer()") 확인       
+                .layer_inner
+                    .desc_layer.pt_132.pb_190 방문자 키가발급되었습니다
+                    .wrapper_layer_ctrl.pb_60
+                        a.layer_ctrl_blue(onclick="closeLayer()") 확인       
             .layer_box(data-layer="visitor-key-cancel")
-                .desc_layer.pt_132.pb_130 취소시작성하신정보가사라집니다.<br />방문자 키 발급을취소하시겠습니까?
-                .wrapper_layer_ctrl.pb_60
-                    a.layer_ctrl_gray(onclick="closeLayer()") 아니오
-                    a.layer_ctrl_blue(onclick="closeLayer()") 네
+                .layer_inner
+                    .desc_layer.pt_132.pb_130 취소시작성하신정보가사라집니다.<br />방문자 키 발급을취소하시겠습니까?
+                    .wrapper_layer_ctrl.pb_60
+                        a.layer_ctrl_gray(onclick="closeLayer()") 아니오
+                        a.layer_ctrl_blue(onclick="closeLayer()") 네
 
         .wrapper_caps_home
             .caps_home_header
