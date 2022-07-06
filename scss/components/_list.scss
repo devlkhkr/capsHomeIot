@@ -188,3 +188,59 @@ ul.wrapper_used_history{
         margin-left: px(20);
     }
 }
+
+.wrapper_brand_li{
+    font-size: 0;
+    padding: px(64);
+    background-image: url(../../images/icon_arr_right.png);
+    background-repeat: no-repeat;
+    background-position: center right px(52);
+    background-size: px(24);
+    & + .wrapper_brand_li {
+        border-top: px(3) solid #ececec;
+    }
+    .brand_logo, .brand_desc {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .brand_logo{
+        width: px(125);
+        height: px(125);
+        border-radius: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .brand_desc{
+        width: calc(100% - #{px(125)});
+        padding-left: px(32);
+        .brand_name{
+            font-size: px(50);
+        }
+        .device_type{
+            font-size: px(42);
+            color: #989898;
+            margin-top: px(16);
+        }
+    }
+}
+
+.wrapper_blunt_history{
+    font-size: 0;
+    padding: px(68) 0;
+    border-top: px(3) solid #ececec;
+    .tal, .tar{
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+        font-size: px(42);
+        font-weight: 700;
+    }
+    .blunt_history_month {
+
+    }
+    .blunt_history_value {
+        color: #2254f3;
+    }
+}

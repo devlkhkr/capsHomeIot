@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="../css/import.css" rel="stylesheet")
+        script(src="../js/jquery.js")
+        script(src="../js/jquery-ui.js")
+        script(src="../js/jquery.range.js")
+        script(src="../js/timepicker.js")
+        script(src="../js/common.js")
+        script(src="../js/reinvented-color-wheel.js")
+        title Document
+    body 
+        .wrapper_caps_home 
+            .caps_home_header
+                i.icon_header_back
+                h2.tit_header 침실브런트플러그
+                a.btn_header_edit 편집
+            .default_pb
+              .box_radius.pt_160.pb_76
+                  .img_blunt_ctrl
+                    img(src="../images/bluntplug.png")
+                  .wrapper_align_lr
+                      .tal
+                          .subtit_fs_50 켜짐
+                      .tar
+                          input(type="checkbox").check_type_01
+              .box_radius.pt_100.pb_100
+                  .wrapper_align_lr
+                      .tal
+                          .subtit_fs_50 화이트모드
+                      .tar
+                          .subtit_fs_50.txt_clr_blue 0.35KWh
+              .box_radius.pt_84
+                  .wrapper_align_lr.pb_58
+                      .tal
+                          .subtit_fs_50 2022년
+                      .tar
+                          .subtit_fs_50 사용량
+                  .wrapper_blunt_history
+                      .tal
+                          .blunt_history_month 6월
+                      .tar
+                          .blunt_history_value 0.35KWh
+                  .wrapper_blunt_history
+                      .tal
+                          .blunt_history_month 5월
+                      .tar
+                          .blunt_history_value 0.35KWh
+                  .wrapper_blunt_history
+                      .tal
+                          .blunt_history_month 4월
+                      .tar
+                          .blunt_history_value 0.35KWh
+                  .wrapper_blunt_history
+                      .tal
+                          .blunt_history_month 3월
+                      .tar
+                          .blunt_history_value 0.35KWh
+              .btn_more.mt_38(onclick="alert('더보기')")
+                  span 더보기
+                  i.icon_more
+
+script.

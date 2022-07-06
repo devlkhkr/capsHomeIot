@@ -17,54 +17,55 @@ html(lang="en")
                 i.icon_header_back
                 h2.tit_header 도어락
                 a.btn_header_edit 편집
-            .box_radius.pt_80.pb_50
-                .wrapper_align_lr
-                    .tal
-                        .subtit_fs_50 닫힘
-                    .tar
-                        input(type="checkbox").check_type_01
-                .wrapper_align_lr.pt_166
-                    .tal
-                        .subtit_fs_45 배터리 상태
-                    .tar
-                        .txt_battery_state.low 15%
-                .notice_gray.pt_50 도어락 배터리가 매우 부족합니다. 배터리를 교체해주세요
-            .box_radius.pt_100.pb_100.bg_arr_r
-                .subtit_fs_45 방문자 키 발급
-            .box_radius.pt_80.pb_64
-                .wrapper_align_lr
-                    .tal
-                        .subtit_fs_45 내부 강제 잠금
-                    .tar
-                        input(type="checkbox").check_type_01
-                .notice_gray.pt_36 외부에서 비밀번호를 해제해도 도어락이<br />열리지 않습니다.
-            .box_radius.pt_94.pb_64
-                .subtit_fs_45 도어락 사용 내역
-                ul.wrapper_used_history.pt_20
-                    li
-                        .tal 
-                            span.history_date 2020.09.09
-                            span.history_time 12:22:10
+            .default_pb
+                .box_radius.pt_80.pb_50
+                    .wrapper_align_lr
+                        .tal
+                            .subtit_fs_50 닫힘
                         .tar
-                            span.history_name 박캡스
-                            span.history_state.opened 열림
-                    li
-                        .tal 
-                            span.history_date 2020.09.09
-                            span.history_time 12:22:10
+                            input(type="checkbox").check_type_01
+                    .wrapper_align_lr.pt_166
+                        .tal
+                            .subtit_fs_45 배터리 상태
                         .tar
-                            span.history_name 박캡스
-                            span.history_state.closed 닫힘
-                    li
-                        .tal 
-                            span.history_date 2020.09.09
-                            span.history_time 12:22:10
+                            .txt_battery_state.low 15%
+                    .notice_gray.pt_50 도어락 배터리가 매우 부족합니다. 배터리를 교체해주세요
+                .box_radius.pt_100.pb_100.bg_arr_r
+                    .subtit_fs_45 방문자 키 발급
+                .box_radius.pt_80.pb_64
+                    .wrapper_align_lr
+                        .tal
+                            .subtit_fs_45 내부 강제 잠금
                         .tar
-                            span.history_name 박캡스
-                            span.history_state.opened 열림
-            .btn_more.mt_38(onclick="alert('더보기')")
-                span 더보기
-                i.icon_more
+                            input(type="checkbox").check_type_01
+                    .notice_gray.pt_36 외부에서 비밀번호를 해제해도 도어락이<br />열리지 않습니다.
+                .box_radius.pt_94.pb_64
+                    .subtit_fs_45 도어락 사용 내역
+                    ul.wrapper_used_history.pt_20
+                        li
+                            .tal 
+                                span.history_date 2020.09.09
+                                span.history_time 12:22:10
+                            .tar
+                                span.history_name 박캡스
+                                span.history_state.opened 열림
+                        li
+                            .tal 
+                                span.history_date 2020.09.09
+                                span.history_time 12:22:10
+                            .tar
+                                span.history_name 박캡스
+                                span.history_state.closed 닫힘
+                        li
+                            .tal 
+                                span.history_date 2020.09.09
+                                span.history_time 12:22:10
+                            .tar
+                                span.history_name 박캡스
+                                span.history_state.opened 열림
+                .btn_more.mt_38(onclick="alert('더보기')")
+                    span 더보기
+                    i.icon_more
 
                 
 script.

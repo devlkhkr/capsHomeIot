@@ -36,6 +36,10 @@ html, body {
     font-weight: 700;
 }
 
+.txt_clr_blue{
+    color: #2254f3;
+}
+
 [class*=notice_]{
     &.notice_gray{
         color: #989898;
@@ -45,6 +49,9 @@ html, body {
     }
     font-size: px(40);
     line-height: 1.25;
+    &.lh_140p{
+        line-height: 1.4;
+    }
     &.before_dot{
         &::before{
             content: "";
