@@ -77,6 +77,8 @@ ul.wrapper_used_history{
         }
         .subtit_fs_42{
             margin-left: px(32);
+            color: #333;
+            font-weight: 400;
         }
     }
 }
@@ -130,10 +132,20 @@ ul.wrapper_used_history{
 }
 
 .assc_device_list{
-    .wrapper_align_lr{
+    .assc_align_lr{
         padding: px(48) 0;
-        & + .wrapper_align_lr{
-            border-top: px(3) solid #ececec;
+        border-top: px(3) solid #ececec;
+        font-size: 0;
+        > div {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+        .tal {
+            width: 70%;
+        }
+        .tar {
+            width: 30%;
         }
     }
     .assc_thumb, .assc_desc{
@@ -156,6 +168,7 @@ ul.wrapper_used_history{
         .assc_state{
             font-size: px(36);
             color: #989898;
+            margin-top: px(8);
         }
     }
 }

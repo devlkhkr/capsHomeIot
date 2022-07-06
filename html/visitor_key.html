@@ -31,7 +31,7 @@
       <div class="layer_box" data-layer="visitor-key-cancel">
         <div class="layer_inner">
           <div class="desc_layer pt_132 pb_130">취소시작성하신정보가사라집니다.<br />방문자 키 발급을취소하시겠습니까?</div>
-          <div class="wrapper_layer_ctrl pb_60"><a class="layer_ctrl_gray" onclick="closeLayer()">아니오</a><a class="layer_ctrl_blue" onclick="closeLayer()">네</a></div>
+          <div class="wrapper_layer_ctrl pb_60"><a class="layer_ctrl_gray" onclick="closeLayer()">아니오</a><a class="layer_ctrl_blue" onclick="closeLayer()">네</a></div>
         </div>
       </div>
     </div>
@@ -60,7 +60,9 @@
         <div class="partition_ec mt_75 mb_92"></div>
         <div class="subtit_fs_45 pb_56">비밀번호설정</div>
         <div class="type_input_button">
-          <input class="input_random" type="text" value="123456">
+          <div class="wrapper_input_random">
+            <input type="text" value="123456"><i class="input_random" onclick="alert('reset')"></i>
+          </div>
           <button class="btn_hei_120 btn_dblue" type="button">랜덤생성</button>
         </div>
         <div class="notice_gray before_dot pt_50">일회용비밀번호로사용할6자리숫자를입력해주세요.</div>

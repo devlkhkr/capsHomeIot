@@ -30,7 +30,7 @@ html(lang="en")
                 .layer_inner
                     .desc_layer.pt_132.pb_130 취소시작성하신정보가사라집니다.<br />방문자 키 발급을취소하시겠습니까?
                     .wrapper_layer_ctrl.pb_60
-                        a.layer_ctrl_gray(onclick="closeLayer()") 아니오
+                        a.layer_ctrl_gray(onclick="closeLayer()") 아니오
                         a.layer_ctrl_blue(onclick="closeLayer()") 네
 
         .wrapper_caps_home
@@ -56,7 +56,9 @@ html(lang="en")
                 .partition_ec.mt_75.mb_92
                 .subtit_fs_45.pb_56 비밀번호설정
                 .type_input_button
-                    input(type="text" value="123456").input_random
+                    .wrapper_input_random
+                        input(type="text" value="123456")
+                        i.input_random(onclick="alert('reset')")
                     button(type="button").btn_hei_120.btn_dblue 랜덤생성
                 .notice_gray.before_dot.pt_50 일회용비밀번호로사용할6자리숫자를입력해주세요.
             .wrapper_bottom_btns

@@ -149,22 +149,35 @@ button {
     background-position: center right px(32);
 }
 
-.input_random {
-    background-image: url(../../images/icon_random.png);
-    background-repeat: no-repeat;
-    background-size: px(56);
-    background-position: center right px(32);
+.wrapper_input_random{
+    position: relative;
+    .input_random {
+        width: px(56);
+        height: px(56);
+        background-image: url(../../images/icon_random.png);
+        @include bgfull;
+        position: absolute;
+        right: px(32);
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 }
 
 .type_input_button {
     display: flex;
     input,
-    button {
+    button,
+    .wrapper_input_random {
         flex: auto;
     }
-    input {
+    input, .wrapper_input_random {
         width: px(598);
         margin-right: px(34);
+    }
+    .wrapper_input_random{
+        input{
+            width: 100%;
+        }
     }
 }
 
