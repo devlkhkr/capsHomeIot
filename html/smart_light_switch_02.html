@@ -21,14 +21,14 @@
       <div class="default_pb">
         <div class="box_radius pt_84">
           <div class="subtit_fs_50 mb_104">개별 설정</div>
-          <div class="img_switch_ctrl"><img src="../images/con_3p_0.png"></div>
+          <div class="img_switch_ctrl"><img src="../images/con_3p_0.png" id="concentImg"></div>
           <div class="wrapper_plug_ctrl">
             <div class="wrapper_align_lr">
               <div class="tal">
                 <div class="subtit_fs_42">1구</div>
               </div>
               <div class="tar">
-                <input class="check_type_01" type="checkbox">
+                <input class="check_type_01" type="checkbox" data-con-idx="0">
               </div>
             </div>
             <div class="wrapper_align_lr">
@@ -36,7 +36,7 @@
                 <div class="subtit_fs_42">2구</div>
               </div>
               <div class="tar">
-                <input class="check_type_01" type="checkbox">
+                <input class="check_type_01" type="checkbox" data-con-idx="1">
               </div>
             </div>
             <div class="wrapper_align_lr">
@@ -44,7 +44,7 @@
                 <div class="subtit_fs_42">3구</div>
               </div>
               <div class="tar">
-                <input class="check_type_01" type="checkbox">
+                <input class="check_type_01" type="checkbox" data-con-idx="2">
               </div>
             </div>
           </div>
@@ -53,4 +53,28 @@
     </div>
   </body>
 </html>
-<script></script>
+<script>
+  var conCtrl = [false, false, false];
+  $("[data-con-idx]").on("change", function() {
+      var conIdx = this.getAttribute("data-con-idx");
+      conCtrl[conIdx] = this.checked;
+      setConImg();
+  })
+  var setConImg = function () {
+      //- console.log(conCtrl)
+      switch(conCtrl){
+          case [true, false, false]:
+              console.log(0)
+              break;
+          case 1:
+              console.log(1)
+              break;
+          case 2:
+              console.log(2)
+              break;
+      }
+  
+  
+      //- $("#concentImg").attr("src", )
+  }
+</script>

@@ -22,22 +22,45 @@ html(lang="en")
                 .box_radius.pt_84
                     .subtit_fs_50.mb_104 개별 설정
                     .img_switch_ctrl
-                        img(src="../images/con_3p_0.png")
+                        img(src="../images/con_3p_0.png")#concentImg
                     .wrapper_plug_ctrl
                         .wrapper_align_lr
                             .tal
                                 .subtit_fs_42 1구
                             .tar
-                                input(type="checkbox").check_type_01
+                                input(type="checkbox" data-con-idx="0").check_type_01
                         .wrapper_align_lr
                             .tal
                                 .subtit_fs_42 2구
                             .tar
-                                input(type="checkbox").check_type_01
+                                input(type="checkbox" data-con-idx="1").check_type_01
                         .wrapper_align_lr
                             .tal
                                 .subtit_fs_42 3구
                             .tar
-                                input(type="checkbox").check_type_01
-
+                                input(type="checkbox" data-con-idx="2").check_type_01
+        
 script.
+    var conCtrl = [false, false, false];
+    $("[data-con-idx]").on("change", function() {
+        var conIdx = this.getAttribute("data-con-idx");
+        conCtrl[conIdx] = this.checked;
+        setConImg();
+    })
+    var setConImg = function () {
+        //- console.log(conCtrl)
+        switch(conCtrl){
+            case [true, false, false]:
+                console.log(0)
+                break;
+            case 1:
+                console.log(1)
+                break;
+            case 2:
+                console.log(2)
+                break;
+        }
+
+
+        //- $("#concentImg").attr("src", )
+    }
