@@ -1128,6 +1128,18 @@ ul.wrapper_used_history li .history_state.opened {
   color: #2254f3;
 }
 
+.wrapper_plug_ctrl {
+  padding-bottom: 0.33333rem;
+}
+
+.wrapper_plug_ctrl .wrapper_align_lr {
+  padding: 0.95833rem 0 0.91667rem;
+}
+
+.wrapper_plug_ctrl .wrapper_align_lr + .wrapper_align_lr {
+  border-top: 0.0625rem solid #ececec;
+}
+
 .range_type_01 .scale, .range_type_02 .scale {
   display: none;
 }

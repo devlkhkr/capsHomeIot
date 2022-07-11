@@ -244,3 +244,13 @@ ul.wrapper_used_history{
         color: #2254f3;
     }
 }
+
+.wrapper_plug_ctrl {
+    padding-bottom: px(16);
+    .wrapper_align_lr{
+        padding: px(46) 0 px(44);
+        & + .wrapper_align_lr{
+            border-top: px(3) solid #ececec;
+        }
+    }
+}
