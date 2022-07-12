@@ -11,9 +11,16 @@
   height: px(400);
   text-align: center;
   margin-bottom: px(146);
+  &.type_02{
+    margin-bottom: px(90);
+  }
   img{
     height: 100%;
   }
+}
+
+.img_switch_ctrl_02{
+  
 }
 
 .img_blunt_ctrl{

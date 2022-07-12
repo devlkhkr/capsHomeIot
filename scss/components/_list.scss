@@ -254,3 +254,44 @@ ul.wrapper_used_history{
         }
     }
 }
+
+.wrapper_switch_onoff{
+    display: flex;
+    align-items: center;
+
+    .tit_onoff{
+        display: inline-block;
+        flex: auto;
+    }
+    
+    .wrapper_onoff {
+        display: inline-block;
+        vertical-align: middle;
+        flex: auto;
+        text-align: right;
+        padding-right: px(32);
+        font-size: 0;
+        dl{
+            display: inline-block;
+            text-align: center;
+            & + dl {
+                margin-left: px(100);
+            }
+            dt{
+                width: px(149);
+                height: px(149);
+                @include bgfull;
+                &.switch_on{
+                    background-image: url(../../images/power-on.png);
+                }
+                &.switch_off{
+                    background-image: url(../../images/power-off.png);
+                }
+            }
+            dd{
+                font-size: px(36);
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -295,6 +295,10 @@ html, body {
   padding-bottom: 1.04167rem;
 }
 
+.pb_54 {
+  padding-bottom: 1.125rem;
+}
+
 .pb_56 {
   padding-bottom: 1.16667rem;
 }
@@ -397,6 +401,10 @@ html, body {
 
 .mb_48 {
   margin-bottom: 1rem;
+}
+
+.mb_80 {
+  margin-bottom: 1.66667rem;
 }
 
 .mb_88 {
@@ -1140,7 +1148,64 @@ ul.wrapper_used_history li .history_state.opened {
   border-top: 0.0625rem solid #ececec;
 }
 
-.range_type_01 .scale, .range_type_02 .scale {
+.wrapper_switch_onoff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper_switch_onoff .tit_onoff {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.wrapper_switch_onoff .wrapper_onoff {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  text-align: right;
+  padding-right: 0.66667rem;
+  font-size: 0;
+}
+
+.wrapper_switch_onoff .wrapper_onoff dl {
+  display: inline-block;
+  text-align: center;
+}
+
+.wrapper_switch_onoff .wrapper_onoff dl + dl {
+  margin-left: 2.08333rem;
+}
+
+.wrapper_switch_onoff .wrapper_onoff dl dt {
+  width: 3.10417rem;
+  height: 3.10417rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.wrapper_switch_onoff .wrapper_onoff dl dt.switch_on {
+  background-image: url(../../images/power-on.png);
+}
+
+.wrapper_switch_onoff .wrapper_onoff dl dt.switch_off {
+  background-image: url(../../images/power-off.png);
+}
+
+.wrapper_switch_onoff .wrapper_onoff dl dd {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.range_type_01 .scale, .range_type_02 .scale, .range_type_04 .scale {
   display: none;
 }
 
@@ -1194,6 +1259,40 @@ ul.wrapper_used_history li .history_state.opened {
   top: 1.125rem;
 }
 
+.range_type_04 {
+  padding-bottom: 2.08333rem;
+}
+
+.range_type_04 .back-bar .pointer-label.high {
+  display: inline-block !important;
+  top: 1.66667rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2254f3;
+  background: transparent;
+}
+
+.range_type_05 .back-bar {
+  height: 0.52083rem !important;
+  background-image: url(../../images/colortemperature.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.range_type_05 .back-bar .selected-bar {
+  background-color: transparent !important;
+}
+
+.range_type_05 .back-bar .pointer {
+  top: -0.57292rem !important;
+  border: 0.125rem solid #fff !important;
+  background-image: url(../../images/colortemperature.png);
+  background-color: transparent !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .image_curtain {
   text-align: center;
 }
@@ -1216,6 +1315,10 @@ ul.wrapper_used_history li .history_state.opened {
   height: 8.33333rem;
   text-align: center;
   margin-bottom: 3.04167rem;
+}
+
+.img_switch_ctrl.type_02 {
+  margin-bottom: 1.875rem;
 }
 
 .img_switch_ctrl img {

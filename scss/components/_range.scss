@@ -1,4 +1,4 @@
-.range_type_01, .range_type_02{
+.range_type_01, .range_type_02, .range_type_04{
   .scale{
     display: none;
   }
@@ -45,6 +45,41 @@
         color: #030303;
         top: px(54);
       }
+    }
+  }
+}
+
+.range_type_04 {
+  padding-bottom: px(100);
+  .back-bar{
+    .pointer-label{
+      &.high{
+        display: inline-block!important;
+        top: px(80);
+        font-size: px(42);
+        font-weight: 700;
+        color: #2254f3;
+        background: transparent;
+      }
+  }
+  }
+}
+
+.range_type_05 {
+  .back-bar{
+    height: px(25)!important;
+    background-image: url(../../images/colortemperature.png);
+    @include bgfull;
+    .selected-bar{
+      background-color: transparent!important;
+    }
+    .pointer{
+      top: px(-27.5)!important;
+      border: px(6) solid #fff!important;
+      background-image: url(../../images/colortemperature.png);
+      background-color: transparent!important;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 }

@@ -16,7 +16,7 @@ html(lang="en")
         .wrapper_caps_home 
             .caps_home_header
                 i.icon_header_back
-                h2.tit_header 침실스마트조명스위치
+                h2.tit_header 침실 스마트 멀티탭
                 a.btn_header_edit 편집
             .default_pb
                 .box_radius.pt_50.pb_38
@@ -31,7 +31,7 @@ html(lang="en")
                                 dd 켜기
                 .box_radius.pt_84
                     .subtit_fs_50.mb_104 개별 설정
-                    .img_switch_ctrl.type_02
+                    .img_switch_ctrl
                         img(src="../images/con_3p_0.png")#concentImg
                     .wrapper_plug_ctrl
                         .wrapper_align_lr
@@ -51,12 +51,4 @@ html(lang="en")
                                 input(type="checkbox" data-con-idx="2").check_type_01
         
 script.
-    var conCtrl = [false, false, false];
-    $("[data-con-idx]").on("change", function() {
-        var conIdx = this.getAttribute("data-con-idx");
-        conCtrl[conIdx] = this.checked;
-        setConImg();
-    })
-    var setConImg = function () {
-
-    }
+    

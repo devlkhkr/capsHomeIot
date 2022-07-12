@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="../css/import.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.range.js"></script>
+    <script src="../js/timepicker.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/reinvented-color-wheel.js"></script>
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="wrapper_caps_home"> 
+      <div class="caps_home_header"><i class="icon_header_back"></i>
+        <h2 class="tit_header">거실 스마트 전구(화이트)</h2><a class="btn_header_edit">편집</a>
+      </div>
+      <div class="default_pb">
+        <div class="box_radius pt_100 pb_100">
+          <div class="wrapper_align_lr">
+            <div class="tal">
+              <div class="subtit_fs_50">켜짐</div>
+            </div>
+            <div class="tar">
+              <input class="check_type_01" type="checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="box_radius pt_60 pb_54">
+          <div class="subtit_fs_45 mb_80">밝기 설정</div>
+          <div class="range_type_04">
+            <div class="wrapper_range" id="range1">
+              <input type="hidden" value="50">
+            </div>
+          </div>
+        </div>
+        <div class="box_radius pt_60 pb_54">
+          <div class="subtit_fs_45 mb_80">색온도설정</div>
+          <div class="range_type_05">
+            <div class="wrapper_range" id="range2">
+              <input type="hidden" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //- S : range
+  $('#range1 input').jRange({
+      from: 0,
+      to: 100,
+      step: 1,
+      scale: [0, 100],
+      format: '%s',
+      width: $("#range1").width(),
+      showLabels: false,
+      snap: true
+  });
+  
+  $('#range2 input').jRange({
+      from: 0,
+      to: 100,
+      step: 1,
+      scale: ["3000K", "6000K"],
+      format: '%s',
+      width: $("#range1").width(),
+      showLabels: false,
+      snap: true,
+      onstatechange: function () {
+          var tempValue = this.getValue();
+          $(this.pointers[1]).css("background-position", "center left " + tempValue + "%");
+      }
+  });
+  //- E : range
+</script>
