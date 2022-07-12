@@ -1,4 +1,4 @@
-.range_type_01, .range_type_02, .range_type_04{
+.range_type_01, .range_type_02, .range_type_04, .range_type_05{
   .scale{
     display: none;
   }
@@ -80,6 +80,22 @@
       background-color: transparent!important;
       background-size: cover;
       background-repeat: no-repeat;
+      box-shadow: px(14) px(8) px(10) px(0) rgba(0,0,0,.05);
     }
+  }
+}
+
+.scale_for_temp{
+  font-size: 0;
+  font-weight: 700;
+  color: #999;
+  margin-top: px(42);
+  .scale_from, .scale_to {
+    display: inline-block;
+    width: 50%;
+    font-size: px(38);
+  }
+  .scale_to{
+    text-align: right;
   }
 }

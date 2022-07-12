@@ -1205,7 +1205,7 @@ ul.wrapper_used_history li .history_state.opened {
   font-weight: 700;
 }
 
-.range_type_01 .scale, .range_type_02 .scale, .range_type_04 .scale {
+.range_type_01 .scale, .range_type_02 .scale, .range_type_04 .scale, .range_type_05 .scale {
   display: none;
 }
 
@@ -1291,6 +1291,25 @@ ul.wrapper_used_history li .history_state.opened {
   background-color: transparent !important;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0.29167rem 0.16667rem 0.20833rem 0rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0.29167rem 0.16667rem 0.20833rem 0rem rgba(0, 0, 0, 0.05);
+}
+
+.scale_for_temp {
+  font-size: 0;
+  font-weight: 700;
+  color: #999;
+  margin-top: 0.875rem;
+}
+
+.scale_for_temp .scale_from, .scale_for_temp .scale_to {
+  display: inline-block;
+  width: 50%;
+  font-size: 0.79167rem;
+}
+
+.scale_for_temp .scale_to {
+  text-align: right;
 }
 
 .image_curtain {
