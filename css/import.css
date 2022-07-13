@@ -656,7 +656,7 @@ button {
 }
 
 .input_date {
-  background-image: url(../../images/icon_cal.png);
+  background-image: url(../images/icon_cal.png);
   background-repeat: no-repeat;
   background-size: 0.95833rem;
   background-position: center right 0.66667rem;
@@ -669,7 +669,7 @@ button {
 .wrapper_input_random .input_random {
   width: 1.16667rem;
   height: 1.16667rem;
-  background-image: url(../../images/icon_random.png);
+  background-image: url(../images/icon_random.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
@@ -836,7 +836,7 @@ button {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url(../../images/icon_x.png);
+  background-image: url(../images/icon_x.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
@@ -1081,7 +1081,7 @@ ul.wrapper_used_history li .history_state.opened {
   display: inline-block;
   width: 0.33333rem;
   height: 0.58333rem;
-  background-image: url(../../images/icon_arr_right.png);
+  background-image: url(../images/icon_arr_right.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
@@ -1093,7 +1093,7 @@ ul.wrapper_used_history li .history_state.opened {
 .wrapper_brand_li {
   font-size: 0;
   padding: 1.33333rem;
-  background-image: url(../../images/icon_arr_right.png);
+  background-image: url(../images/icon_arr_right.png);
   background-repeat: no-repeat;
   background-position: center right 1.08333rem;
   background-size: 0.5rem;
@@ -1209,11 +1209,11 @@ ul.wrapper_used_history li .history_state.opened {
 }
 
 .wrapper_switch_onoff .wrapper_onoff dl dt.switch_on {
-  background-image: url(../../images/power-on.png);
+  background-image: url(../images/power-on.png);
 }
 
 .wrapper_switch_onoff .wrapper_onoff dl dt.switch_off {
-  background-image: url(../../images/power-off.png);
+  background-image: url(../images/power-off.png);
 }
 
 .wrapper_switch_onoff .wrapper_onoff dl dd {
@@ -1313,7 +1313,7 @@ ul.wrapper_used_history li .history_state.opened {
 
 .range_type_05 .back-bar {
   height: 0.52083rem !important;
-  background-image: url(../../images/colortemperature.png);
+  background-image: url(../images/colortemperature.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
@@ -1326,7 +1326,7 @@ ul.wrapper_used_history li .history_state.opened {
 .range_type_05 .back-bar .pointer {
   top: -0.57292rem !important;
   border: 0.125rem solid #fff !important;
-  background-image: url(../../images/colortemperature.png);
+  background-image: url(../images/colortemperature.png);
   background-color: transparent !important;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1533,7 +1533,7 @@ ul.wrapper_used_history li .history_state.opened {
   width: 0.58333rem;
   height: 1rem;
   left: 1.04167rem;
-  background-image: url(../../images/icon_arr_right.png);
+  background-image: url(../images/icon_arr_right.png);
   -webkit-transform: rotate(180deg) translate(0, 50%);
           transform: rotate(180deg) translate(0, 50%);
   background-repeat: no-repeat;
@@ -1588,7 +1588,7 @@ ul.wrapper_used_history li .history_state.opened {
 
 .box_radius.bg_arr_r {
   background-repeat: no-repeat;
-  background-image: url(../../images/icon_arr_right.png);
+  background-image: url(../images/icon_arr_right.png);
   background-position: center right 1.875rem;
   background-size: 0.45833rem;
 }

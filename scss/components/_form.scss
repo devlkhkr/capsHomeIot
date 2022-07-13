@@ -143,7 +143,7 @@ button {
 }
 
 .input_date {
-    background-image: url(../../images/icon_cal.png);
+    background-image: url(../images/icon_cal.png);
     background-repeat: no-repeat;
     background-size: px(46);
     background-position: center right px(32);
@@ -154,7 +154,7 @@ button {
     .input_random {
         width: px(56);
         height: px(56);
-        background-image: url(../../images/icon_random.png);
+        background-image: url(../images/icon_random.png);
         @include bgfull;
         position: absolute;
         right: px(32);

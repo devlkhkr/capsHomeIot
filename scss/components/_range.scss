@@ -68,7 +68,7 @@
 .range_type_05 {
   .back-bar{
     height: px(25)!important;
-    background-image: url(../../images/colortemperature.png);
+    background-image: url(../images/colortemperature.png);
     @include bgfull;
     .selected-bar{
       background-color: transparent!important;
@@ -76,7 +76,7 @@
     .pointer{
       top: px(-27.5)!important;
       border: px(6) solid #fff!important;
-      background-image: url(../../images/colortemperature.png);
+      background-image: url(../images/colortemperature.png);
       background-color: transparent!important;
       background-size: cover;
       background-repeat: no-repeat;
