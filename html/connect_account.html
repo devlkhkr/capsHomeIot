@@ -13,20 +13,37 @@
     <title>Document</title>
   </head>
   <body> 
+    <div class="wrapper_layer_popup">
+      <div id="layer_mask"></div>
+      <div class="layer_box" data-layer="connect-account">
+        <div class="btn_layer_close" onclick="closeLayer()"></div>
+        <div class="layer_scroll">
+          <div class="acc_brand_info">
+            <div class="acc_brand_img"><img src="" id="accTargetImg"></div>
+            <div class="acc_brand_name accTargetTit"></div>
+          </div>
+          <div class="acc_pop_ctrl tac">
+            <button class="btn_hei_120 btn_wid_380 btn_lblue" type="button">계정연결</button>
+            <button class="btn_hei_120 btn_wid_380 btn_lgray" type="button" onclick="closeLayer()">취소</button>
+          </div>
+          <div class="notice_gray mt_75 lh_140p pb_100 tac"><span class="accTargetTit"></span> 계정을 연결하면 기기 목록이 제공됩니다.</div>
+        </div>
+      </div>
+    </div>
     <div class="wrapper_caps_home">
       <div class="caps_home_header"><i class="icon_header_back"></i>
         <h2 class="tit_header">계정연결</h2><i class="icon_header_menu"></i>
       </div>
       <div class="subtit_fs_42 pl_60 pt_100 fw_700">미연결브랜드</div>
       <div class="bg_fff mt_56">
-        <div class="wrapper_brand_li">
+        <div class="wrapper_brand_li" onclick="conAccPopup(this)">
           <div class="brand_logo"><img src="../images/solity.png"></div>
           <div class="brand_desc">
             <div class="brand_name">솔리티</div>
             <div class="device_type">도어락</div>
           </div>
         </div>
-        <div class="wrapper_brand_li">
+        <div class="wrapper_brand_li" onclick="conAccPopup(this)">
           <div class="brand_logo"><img src="../images/hej.png"></div>
           <div class="brand_desc">
             <div class="brand_name">헤이홈</div>
@@ -36,7 +53,7 @@
       </div>
       <div class="subtit_fs_42 pl_60 pt_100 fw_700">연결된브랜드</div>
       <div class="bg_fff mt_56">
-        <div class="wrapper_brand_li">
+        <div class="wrapper_brand_li" onclick="conAccPopup(this)">
           <div class="brand_logo"><img src="../images/hej.png"></div>
           <div class="brand_desc">
             <div class="brand_name">헤이홈</div>
@@ -48,4 +65,12 @@
     </div>
   </body>
 </html>
-<script></script>
+<script>
+  var conAccPopup = function (box) {
+    var targetImgSrc = $(box).find(".brand_logo img").attr("src"),
+    targetTit = $(box).find(".brand_name").text();
+    $("#accTargetImg").attr("src", targetImgSrc);
+    $(".accTargetTit").text(targetTit)
+    openLayer("connect-account")
+  }
+</script>

@@ -12,6 +12,21 @@ html(lang="en")
         script(src="../js/common.js")
         title Document
     body 
+        .wrapper_layer_popup
+            #layer_mask
+            .layer_box(data-layer="connect-account")
+                .btn_layer_close(onclick="closeLayer()")
+                .layer_scroll
+                  .acc_brand_info
+                    .acc_brand_img
+                      img(src="")#accTargetImg
+                    .acc_brand_name.accTargetTit
+                  .acc_pop_ctrl.tac
+                    button(type="button").btn_hei_120.btn_wid_380.btn_lblue 계정연결
+                    button(type="button" onclick="closeLayer()").btn_hei_120.btn_wid_380.btn_lgray 취소
+                  .notice_gray.mt_75.lh_140p.pb_100.tac <span class="accTargetTit"></span> 계정을 연결하면 기기 목록이 제공됩니다.
+
+
         .wrapper_caps_home
             .caps_home_header
                 i.icon_header_back
@@ -19,13 +34,13 @@ html(lang="en")
                 i.icon_header_menu
             .subtit_fs_42.pl_60.pt_100.fw_700 미연결브랜드
             .bg_fff.mt_56
-              .wrapper_brand_li
+              .wrapper_brand_li(onclick="conAccPopup(this)")
                 .brand_logo
                   img(src="../images/solity.png")
                 .brand_desc
                   .brand_name 솔리티
                   .device_type 도어락
-              .wrapper_brand_li
+              .wrapper_brand_li(onclick="conAccPopup(this)")
                 .brand_logo
                   img(src="../images/hej.png")
                 .brand_desc
@@ -33,7 +48,7 @@ html(lang="en")
                   .device_type 조명,플러그,전동커튼
             .subtit_fs_42.pl_60.pt_100.fw_700 연결된브랜드
             .bg_fff.mt_56
-              .wrapper_brand_li
+              .wrapper_brand_li(onclick="conAccPopup(this)")
                 .brand_logo
                   img(src="../images/hej.png")
                 .brand_desc
@@ -42,3 +57,11 @@ html(lang="en")
             .notice_gray.pl_60.mt_75.lh_140p 신규 브랜드들이 계속 추가될 예정입니다.<br />캡스홈과 함께 안전하고 편리한 생활을 즐겨보세요.
 
 script.
+
+  var conAccPopup = function (box) {
+    var targetImgSrc = $(box).find(".brand_logo img").attr("src"),
+    targetTit = $(box).find(".brand_name").text();
+    $("#accTargetImg").attr("src", targetImgSrc);
+    $(".accTargetTit").text(targetTit)
+    openLayer("connect-account")
+  }

@@ -36,7 +36,15 @@
         </div>
         <div class="box_radius pt_84">
           <div class="subtit_fs_50 mb_104">개별 설정</div>
-          <div class="img_switch_ctrl type_02"><img src="../images/con_3p_0.png" id="concentImg"></div>
+          <div class="img_switch_ctrl">
+            <div class="ui_smart_switch">
+              <div class="ui_wrap">
+                <div class="each_ui" data-switch-idx="0"></div>
+                <div class="each_ui" data-switch-idx="1"></div>
+                <div class="each_ui" data-switch-idx="2"></div>
+              </div>
+            </div>
+          </div>
           <div class="wrapper_plug_ctrl">
             <div class="wrapper_align_lr">
               <div class="tal">
@@ -69,13 +77,13 @@
   </body>
 </html>
 <script>
-  var conCtrl = [false, false, false];
-  $("[data-con-idx]").on("change", function() {
-      var conIdx = this.getAttribute("data-con-idx");
-      conCtrl[conIdx] = this.checked;
-      setConImg();
+  $("[data-con-idx]").on("change", function(){
+      var targetIdx = $(this).attr("data-con-idx")
+      var targetUI = $("[data-switch-idx=" + targetIdx + "]");
+      if(this.checked){
+          targetUI.addClass("on")
+      }else{
+          targetUI.removeClass("on")
+      }
   })
-  var setConImg = function () {
-  
-  }
 </script>

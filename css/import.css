@@ -191,6 +191,14 @@ html, body {
   color: #2254f3;
 }
 
+.assc_device_empty {
+  color: #2254f3;
+  font-size: 1.04167rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 2.08333rem 0;
+}
+
 .default_pb {
   padding-bottom: 4.16667rem;
 }
@@ -754,6 +762,14 @@ button {
   color: #cc3333;
 }
 
+.acc_pop_ctrl button + button {
+  margin-left: 0.66667rem;
+}
+
+.btn_connect_device {
+  width: 100%;
+}
+
 .wrapper_layer_popup {
   display: none;
   position: fixed;
@@ -1203,6 +1219,29 @@ ul.wrapper_used_history li .history_state.opened {
 .wrapper_switch_onoff .wrapper_onoff dl dd {
   font-size: 0.75rem;
   font-weight: 700;
+  padding-top: 0.5rem;
+}
+
+.acc_brand_info {
+  padding: 1.25rem;
+}
+
+.acc_brand_info > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.acc_brand_info .acc_brand_img {
+  border-radius: 100%;
+}
+
+.acc_brand_info .acc_brand_img img {
+  width: 2.60417rem;
+  height: 2.60417rem;
+}
+
+.acc_brand_info .acc_brand_name {
+  margin-left: 0.66667rem;
 }
 
 .range_type_01 .scale, .range_type_02 .scale, .range_type_04 .scale, .range_type_05 .scale {
@@ -1344,6 +1383,19 @@ ul.wrapper_used_history li .history_state.opened {
   height: 100%;
 }
 
+.img_multitap_ctrl {
+  text-align: center;
+  margin-bottom: 4.16667rem;
+}
+
+.img_multitap_ctrl.type_02 {
+  margin-bottom: 1.875rem;
+}
+
+.img_multitap_ctrl img {
+  height: 100%;
+}
+
 .img_blunt_ctrl {
   height: 5.89583rem;
   text-align: center;
@@ -1352,6 +1404,104 @@ ul.wrapper_used_history li .history_state.opened {
 
 .img_blunt_ctrl img {
   height: 100%;
+}
+
+.ui_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.ui_wrap .each_ui {
+  width: 1.60417rem;
+  height: 1.60417rem;
+  border: 0.10417rem solid #ccc;
+  position: relative;
+  border-radius: 100%;
+}
+
+.ui_wrap .each_ui::before, .ui_wrap .each_ui::after {
+  background-color: #ccc;
+}
+
+.ui_wrap .each_ui.on {
+  border-color: #48a875;
+}
+
+.ui_wrap .each_ui.on::before, .ui_wrap .each_ui.on::after {
+  background-color: #48a875;
+}
+
+.ui_smart_switch {
+  width: 4.79167rem;
+  height: 8.22917rem;
+}
+
+.ui_smart_switch .ui_wrap .each_ui + .each_ui {
+  margin-top: 0.5625rem;
+}
+
+.ui_smart_switch .ui_wrap .each_ui::before {
+  display: inline-block;
+  content: "";
+  width: 0.39583rem;
+  height: 0.77083rem;
+  border-radius: 0.18333rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.ui_smart_multitap {
+  width: 8.33333rem;
+  height: 3.125rem;
+}
+
+.ui_smart_multitap .ui_wrap {
+  white-space: nowrap;
+}
+
+.ui_smart_multitap .ui_wrap .each_ui {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ui_smart_multitap .ui_wrap .each_ui + .each_ui {
+  margin-left: 0.45833rem;
+}
+
+.ui_smart_multitap .ui_wrap .each_ui::before, .ui_smart_multitap .ui_wrap .each_ui::after {
+  display: inline-block;
+  content: "";
+  width: 0.33333rem;
+  height: 0.33333rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.ui_smart_multitap .ui_wrap .each_ui::before {
+  left: 0.25rem;
+}
+
+.ui_smart_multitap .ui_wrap .each_ui::after {
+  right: 0.25rem;
+}
+
+.ui_smart_switch, .ui_smart_multitap {
+  display: inline-block;
+  position: relative;
+  background-color: #f5f4f0;
+  border: 0.10417rem solid #999;
+  -webkit-box-shadow: 0.09375rem 0.08333rem 0.20833rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0.09375rem 0.08333rem 0.20833rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.52083rem;
 }
 
 .caps_home_header {
@@ -1441,6 +1591,10 @@ ul.wrapper_used_history li .history_state.opened {
   background-image: url(../../images/icon_arr_right.png);
   background-position: center right 1.875rem;
   background-size: 0.45833rem;
+}
+
+.wrapper_empty {
+  padding: 1.25rem;
 }
 
 .wrapper_align_lr {

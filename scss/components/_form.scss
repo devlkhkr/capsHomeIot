@@ -236,3 +236,13 @@ button {
         }
     }
 }
+
+.acc_pop_ctrl{
+    button + button {
+        margin-left: px(32);
+    }
+}
+
+.btn_connect_device{
+    width: 100%;
+}

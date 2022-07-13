@@ -291,7 +291,26 @@ ul.wrapper_used_history{
             dd{
                 font-size: px(36);
                 font-weight: 700;
+                padding-top: px(24);
             }
         }
+    }
+}
+
+.acc_brand_info{
+    padding: px(60);
+    > div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .acc_brand_img {
+        border-radius: 100%;
+        img{
+            width: px(125);
+            height: px(125);
+        }
+    }
+    .acc_brand_name {
+        margin-left: px(32);
     }
 }

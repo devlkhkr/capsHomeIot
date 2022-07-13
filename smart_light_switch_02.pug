@@ -31,8 +31,12 @@ html(lang="en")
                                 dd 켜기
                 .box_radius.pt_84
                     .subtit_fs_50.mb_104 개별 설정
-                    .img_switch_ctrl.type_02
-                        img(src="../images/con_3p_0.png")#concentImg
+                    .img_switch_ctrl
+                        .ui_smart_switch
+                            .ui_wrap
+                                .each_ui(data-switch-idx="0")
+                                .each_ui(data-switch-idx="1")
+                                .each_ui(data-switch-idx="2")
                     .wrapper_plug_ctrl
                         .wrapper_align_lr
                             .tal
@@ -51,12 +55,12 @@ html(lang="en")
                                 input(type="checkbox" data-con-idx="2").check_type_01
         
 script.
-    var conCtrl = [false, false, false];
-    $("[data-con-idx]").on("change", function() {
-        var conIdx = this.getAttribute("data-con-idx");
-        conCtrl[conIdx] = this.checked;
-        setConImg();
+    $("[data-con-idx]").on("change", function(){
+        var targetIdx = $(this).attr("data-con-idx")
+        var targetUI = $("[data-switch-idx=" + targetIdx + "]");
+        if(this.checked){
+            targetUI.addClass("on")
+        }else{
+            targetUI.removeClass("on")
+        }
     })
-    var setConImg = function () {
-
-    }
