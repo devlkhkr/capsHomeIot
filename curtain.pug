@@ -19,52 +19,63 @@ html(lang="en")
                 h2.tit_header 거실 커튼 1
                 a.btn_header_edit 편집
             .default_pb
-              .box_radius.pt_100.pb_100
-                  .wrapper_align_lr
-                      .tal
-                          .subtit_fs_50 켜짐
-                      .tar
-                          input(type="checkbox").check_type_01
+                .box_radius.pt_100.pb_100
+                    .wrapper_align_lr
+                        .tal
+                            .subtit_fs_50 켜짐
+                        .tar
+                            input(type="checkbox" onchange="setRangeOnOff(this)").check_type_01#toggleCurtain
 
-              .box_radius.pt_100.pb_100
-                  .wrapper_align_lr
-                      .tal
-                          .subtit_fs_50 화이트모드
-                      .tar
-                          input(type="checkbox").check_type_01
-              .box_radius.pt_60.pb_66
-                .wrapper_align_lr
-                    .tal
-                        .subtit_fs_50 커튼 열림 설정
-                    .tar
-                        .txt_curtain_state <span id="curtain_percent">50</span>% 열림
-                .notice_gray.pt_24.pb_60.fs_36 커튼의열림정도를설정합니다.
-                .wrapper_curtain.mb_120
-                  .image_curtain
-                    img(src="../images/curtain.png" alt="curtain image")
-                .range_type_03
-                  .wrapper_range(id="range1")
-                    input(type="hidden" value="50")
-                .wrapper_align_lr
-                    .tal
-                        .subtit_fs_40 닫힘
-                    .tar
-                        .subtit_fs_40 열림
-                
+                .box_radius.pt_100.pb_100
+                    .wrapper_align_lr
+                        .tal
+                            .subtit_fs_50 화이트모드
+                        .tar
+                            input(type="checkbox").check_type_01
+                .box_radius.pt_60.pb_66
+                    .wrapper_align_lr
+                        .tal
+                            .subtit_fs_50 커튼 열림 설정
+                        .tar
+                            .txt_curtain_state <span id="curtain_percent">0</span>% 열림
+                    .notice_gray.pt_24.pb_60.fs_36 커튼의열림정도를설정합니다.
+                    .wrapper_curtain.mb_120
+                        .image_curtain
+                            img(src="../images/curtain.png" alt="curtain image")
+                    .range_type_03
+                        .wrapper_range(id="range1")
+                            input(type="hidden" value="0")
+                    .wrapper_align_lr
+                        .tal
+                            .subtit_fs_40 닫힘
+                        .tar
+                            .subtit_fs_40 열림
+
 script.
+    //- S : range
+    var rangeDOM = $('#range1 input');
+    var options = {
+        from: 0,
+        to: 100,
+        step: 1,
+        scale: [0, 25, 50, 75, 100],
+        format: '%s',
+        width: $("#range1").width(),
+        showLabels: false,
+        snap: true,
+        onstatechange: function () {
+            $("#curtain_percent").text(this.getValue());
+            this.getValue() > 0 ? $("#toggleCurtain")[0].checked = true : $("#toggleCurtain")[0].checked  = false;
+        }
+    }
+    var curtainRange = rangeDOM.jRange(options);
+    //- E : range
 
-  //- S : range
-  $('#range1 input').jRange({
-    from: 0,
-    to: 100,
-    step: 1,
-    scale: [0, 25, 50, 75, 100],
-    format: '%s',
-    width: $("#range1").width(),
-    showLabels: false,
-    snap: true,
-    onstatechange: function () {
-      $("#curtain_percent").text(this.getValue())
-    }    
-  });
-  //- E : range
+    var setRangeOnOff = function (input) {
+        rangeDOM.removeData('plugin_jRange');
+        rangeDOM.next().remove();
+        var rangeVal = input.checked == true ? 100 : 0;
+        rangeDOM.val(rangeVal);
+        rangeDOM.jRange(options);
+        $("#curtain_percent").text(rangeVal);
+    }

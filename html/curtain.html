@@ -25,7 +25,7 @@
               <div class="subtit_fs_50">켜짐</div>
             </div>
             <div class="tar">
-              <input class="check_type_01" type="checkbox">
+              <input class="check_type_01" type="checkbox" onchange="setRangeOnOff(this)" id="toggleCurtain">
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
               <div class="subtit_fs_50">커튼 열림 설정</div>
             </div>
             <div class="tar">
-              <div class="txt_curtain_state"><span id="curtain_percent">50</span>% 열림</div>
+              <div class="txt_curtain_state"><span id="curtain_percent">0</span>% 열림</div>
             </div>
           </div>
           <div class="notice_gray pt_24 pb_60 fs_36">커튼의열림정도를설정합니다.</div>
@@ -54,7 +54,7 @@
           </div>
           <div class="range_type_03">
             <div class="wrapper_range" id="range1">
-              <input type="hidden" value="50">
+              <input type="hidden" value="0">
             </div>
           </div>
           <div class="wrapper_align_lr">
@@ -72,18 +72,30 @@
 </html>
 <script>
   //- S : range
-  $('#range1 input').jRange({
-    from: 0,
-    to: 100,
-    step: 1,
-    scale: [0, 25, 50, 75, 100],
-    format: '%s',
-    width: $("#range1").width(),
-    showLabels: false,
-    snap: true,
-    onstatechange: function () {
-      $("#curtain_percent").text(this.getValue())
-    }    
-  });
+  var rangeDOM = $('#range1 input');
+  var options = {
+      from: 0,
+      to: 100,
+      step: 1,
+      scale: [0, 25, 50, 75, 100],
+      format: '%s',
+      width: $("#range1").width(),
+      showLabels: false,
+      snap: true,
+      onstatechange: function () {
+          $("#curtain_percent").text(this.getValue());
+          this.getValue() > 0 ? $("#toggleCurtain")[0].checked = true : $("#toggleCurtain")[0].checked  = false;
+      }
+  }
+  var curtainRange = rangeDOM.jRange(options);
   //- E : range
+  
+  var setRangeOnOff = function (input) {
+      rangeDOM.removeData('plugin_jRange');
+      rangeDOM.next().remove();
+      var rangeVal = input.checked == true ? 100 : 0;
+      rangeDOM.val(rangeVal);
+      rangeDOM.jRange(options);
+      $("#curtain_percent").text(rangeVal);
+  }
 </script>
